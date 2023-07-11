@@ -1,0 +1,39 @@
+
+state={
+	id=608
+	name="STATE_608"
+	manpower = 9648400
+	buildings_max_level_factor = 25.000
+	state_category = metropolis
+	resources={
+	steel = 15
+	}
+
+	history={
+	owner = TOP
+	add_core_of = TOP
+	add_core_of = CHI
+	add_core_of = PRC
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 8
+			arms_factory = 9
+			air_base = 5
+			10068 = {
+				naval_base = 10
+				bunker = 3
+				coastal_bunker = 3
+			}
+		}
+		victory_points = {
+			9843 20
+		}
+		victory_points = {
+			10068 1 
+		}		
+	}
+
+	provinces={
+		1134 4137 4140 6828 9843 9969 10068 11761 12026 
+	}
+}

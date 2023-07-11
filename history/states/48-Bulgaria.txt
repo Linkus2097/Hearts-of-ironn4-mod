@@ -1,0 +1,35 @@
+
+state={
+	id=48
+	name="STATE_48"
+	manpower = 1891500
+	buildings_max_level_factor = 25.000
+	resources={
+		aluminium = 5
+		steel = 21
+	}
+	
+	
+	state_category = metropolis
+
+	history={
+		owner = ALM
+		victory_points = {
+			949 15 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 10
+			arms_factory = 10
+			air_base = 10
+			    949 = {
+			    bunker = 5
+			}
+		}
+		add_core_of = ALM
+	}
+
+	provinces={
+		793 935 949 965 3908 3971 6857 9771 9818 11754 
+	}
+}

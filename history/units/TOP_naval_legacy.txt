@@ -1,0 +1,153 @@
+units= {
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Haupt Flot"			
+		naval_base = 10068
+		task_force = {				
+			name = "Strike Flot"
+			location = 10068 # Tianjin	
+			ship = { name = "Gindar" pride_of_the_fleet = yes definition = battleship equipment = { battleship_1 = { amount = 1 owner = TOP version_name = "Gindar Class" } } }
+			ship = { name = "Sut Korea" definition = battleship equipment = { battleship_1 = { amount = 1 owner = TOP version_name = "Gindar Class" } } }
+			ship = { name = "Kalaman Soliman" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = TOP version_name = "Kalaman Soliman Class" } } } 
+			ship = { name = "Klam" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = TOP version_name = "Kalaman Soliman Class" } } } 
+			ship = { name = "Scham" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = TOP version_name = "Kalaman Soliman Class" } } }
+			ship = { name = "Poliar" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = TOP version_name = "Poliar Class" } } } 
+			ship = { name = "Beijing" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = TOP version_name = "Poliar Class" } } }		
+			ship = { name = "Nanjing" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = TOP version_name = "Poliar Class" } } }			
+			ship = { name = "Schantai" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = TOP version_name = "Schantai Class" } } }	
+			ship = { name = "Shanghai" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = TOP version_name = "Schantai Class" } } }			
+			ship = { name = "Yangtze" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = TOP version_name = "Schantai Class" } } }
+			ship = { name = "Huanghe" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = TOP version_name = "Schantai Class" } } }
+			ship = { name = "Daban" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = TOP version_name = "Poliar Class" } } } 
+			ship = { name = "Shenyang" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = TOP version_name = "Poliar Class" } } }		
+			ship = { name = "Fushan" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = TOP version_name = "Poliar Class" } } }			
+			ship = { name = "Hiroshima" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = TOP version_name = "Schantai Class" } } }	
+			ship = { name = "Hancheng" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = TOP version_name = "Schantai Class" } } }			
+			ship = { name = "Pingrang" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = TOP version_name = "Schantai Class" } } }
+			ship = { name = "Greingin" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = TOP version_name = "Schantai Class" } } }
+			ship = { name = "Celsius" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Lakar" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Kling" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Sing" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Kasett" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Shinto" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Confuzi" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Gilbsee" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+		}
+		task_force = {
+			name = "Support and Harrass Flot"
+			location = 10068  # Tianjin
+			ship = { name = "Taipei" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = TOP version_name = "Schantai Class" } } }
+			ship = { name = "Honshu" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = TOP version_name = "Schantai Class" } } }
+			ship = { name = "Gaoxiong" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = TOP version_name = "Schantai Class" } } }
+			ship = { name = "Pakifis Ozeanis" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = TOP version_name = "Schantai Class" } } }
+			ship = { name = "Room" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Bloom" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Boom" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Ping" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }		
+			ship = { name = "Mi" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Sias" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Öste" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Wüteas" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Shullke" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Ling" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }		
+			ship = { name = "Meis" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Krit" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Calcio" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Latto" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Re" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Dos" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Ti" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Lalas" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+		}
+	}
+
+	fleet = {
+		name = "Japanski Flot"			
+		naval_base = 9950
+		task_force = {				
+			name = "Sut Japanski Strike Flot"
+			location = 9950 # Nagasaki	
+			ship = { name = "Schantai" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = TOP version_name = "Schantai Class" } } }
+			ship = { name = "Fanta" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = TOP version_name = "Schantai Class" } } }
+			ship = { name = "Caias" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = TOP version_name = "Schantai Class" } } }
+			ship = { name = "Spritze" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = TOP version_name = "Schantai Class" } } }
+			ship = { name = "Sant" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Goose" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Entz" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Lakakavi" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Shlintze" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Jing" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Ming" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Qing" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "King" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Wing" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+		}
+		task_force = {
+			name = "Sut Japanski Supfor"
+			location = 9950  # Nagasaki		
+			ship = { name = "Chailakarka" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Polsti" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Flink" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Grighin" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Pi" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Kul" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Tulani" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Wawe" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Uip" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Hio" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Shuan" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Qwes" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Shana" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Nono" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Yesyes" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+			ship = { name = "Wis-Was" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = TOP version_name = "Lakar Class" } } }
+		}
+	}
+			
+	fleet = {
+		name = "U-Boti Flot"			
+		naval_base = 12068  # Gaoxiong
+		task_force = {
+			name = "I. Flotili Uboti"
+			location = 12068  # Gaoxiong
+			# 1. Flotili Uboti
+			ship = { name = "U-1" definition = submarine equipment = { submarine_2 = { amount = 1 owner = TOP version_name = "Solius Class" } } }
+			ship = { name = "U-2" definition = submarine equipment = { submarine_2 = { amount = 1 owner = TOP version_name = "Solius Class" } } }
+			ship = { name = "U-3" definition = submarine equipment = { submarine_2 = { amount = 1 owner = TOP version_name = "Solius Class" } } }
+			ship = { name = "U-4" definition = submarine equipment = { submarine_2 = { amount = 1 owner = TOP version_name = "Solius Class" } } }
+			# 2. Flotili Uboti
+			ship = { name = "U-5" definition = submarine equipment = { submarine_2 = { amount = 1 owner = TOP version_name = "Solius Class" } } }
+			ship = { name = "U-6" definition = submarine equipment = { submarine_2 = { amount = 1 owner = TOP version_name = "Solius Class" } } }
+			ship = { name = "U-7" definition = submarine equipment = { submarine_2 = { amount = 1 owner = TOP version_name = "Solius Class" } } }
+			ship = { name = "U-8" definition = submarine equipment = { submarine_2 = { amount = 1 owner = TOP version_name = "Solius Class" } } }
+		}
+		task_force = {
+			name = "II. Flotili Uboti"
+			location = 12068  # Gaoxiong
+			# 3. Flotili Uboti
+			ship = { name = "U-9" definition = submarine equipment = { submarine_2 = { amount = 1 owner = TOP version_name = "Solius Class" } } }
+			ship = { name = "U-10" definition = submarine equipment = { submarine_2 = { amount = 1 owner = TOP version_name = "Solius Class" } } }
+			ship = { name = "U-11" definition = submarine equipment = { submarine_2 = { amount = 1 owner = TOP version_name = "Solius Class" } } }
+			# 4. Flotili Uboti
+			ship = { name = "U-12" definition = submarine equipment = { submarine_2 = { amount = 1 owner = TOP version_name = "Solius Class" } } }
+			ship = { name = "U-13" definition = submarine equipment = { submarine_2 = { amount = 1 owner = TOP version_name = "Solius Class" } } }
+			ship = { name = "U-14" definition = submarine equipment = { submarine_2 = { amount = 1 owner = TOP version_name = "Solius Class" } } }
+			ship = { name = "U-15" definition = submarine equipment = { submarine_2 = { amount = 1 owner = TOP version_name = "Solius Class" } } }
+			ship = { name = "U-16" definition = submarine equipment = { submarine_2 = { amount = 1 owner = TOP version_name = "Solius Class" } } }
+			ship = { name = "U-17" definition = submarine equipment = { submarine_2 = { amount = 1 owner = TOP version_name = "Solius Class" } } }
+			ship = { name = "U-18" definition = submarine equipment = { submarine_2 = { amount = 1 owner = TOP version_name = "Solius Class" } } }
+			ship = { name = "U-19" definition = submarine equipment = { submarine_2 = { amount = 1 owner = TOP version_name = "Solius Class" } } }
+			ship = { name = "U-20" definition = submarine equipment = { submarine_2 = { amount = 1 owner = TOP version_name = "Solius Class" } } }
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+
+#####################

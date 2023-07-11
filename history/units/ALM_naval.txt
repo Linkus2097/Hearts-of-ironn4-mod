@@ -1,0 +1,75 @@
+units= {
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Egeĭski flot"			
+		naval_base = 11818
+		task_force = {				
+			name = "Tsarigrad Okhrana"
+			location = 9833 # Tsarigrad	
+			ship = { name = "Garotte Matilla" pride_of_the_fleet = yes definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ALM version_name = "Garotte Matilla Class" } } }
+			ship = { name = "Shalissa" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ALM version_name = "Lapengas Class" } } } 		
+			ship = { name = "Lapengas" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ALM version_name = "Lapengas Class" } } }		
+			ship = { name = "Kalinka" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ALM version_name = "Lapengas Class" } } }			
+			ship = { name = "Burgas" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ALM version_name = "Lapengas Class" } } }	
+			ship = { name = "Plovdiv" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ALM version_name = "Lapengas Class" } } }			
+			ship = { name = "Dunav" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ALM version_name = "Lapengas Class" } } }
+			ship = { name = "Sheggi" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = ALM version_name = "Slintavosky Class" } } }
+			ship = { name = "Breggi" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = ALM version_name = "Slintavosky Class" } } }
+			ship = { name = "Laggi" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = ALM version_name = "Slintavosky Class" } } }
+			ship = { name = "Tinalse" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = ALM version_name = "Slintavosky Class" } } }
+		}
+		task_force = {
+			name = "Solun Okhrana"
+			location = 11818  # Solun		
+			ship = { name = "Chaika" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 2 owner = ALM version_name = "Slintavosky Class" } } }
+			ship = { name = "Albatros" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 2 owner = ALM version_name = "Slintavosky Class" } } }
+			ship = { name = "Kalko" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = ALM version_name = "Slintavosky Class" } } }
+			ship = { name = "Spaltosa" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = ALM version_name = "Slintavosky Class" } } }
+			ship = { name = "Fissit" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = ALM version_name = "Slintavosky Class" } } }
+			ship = { name = "Sopper" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = ALM version_name = "Slintavosky Class" } } }
+			ship = { name = "Goller" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = ALM version_name = "Slintavosky Class" } } }
+			ship = { name = "Karolla" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = ALM version_name = "Slintavosky Class" } } }
+		}
+	}
+			
+	fleet = {
+		name = "Podvoden flot"			
+		naval_base = 9783  # Varna
+		task_force = {
+			name = "I. Flotiliya podvodnitsi"
+			location = 9783  # Varna
+			# 1. Flotiliya podvodnitsi
+			ship = { name = "P-1" definition = submarine start_experience_factor = 0.3 equipment = { ship_hull_submarine_2 = { amount = 1 owner = ALM version_name = "Podolskiya Riggich Class" } } }
+			ship = { name = "P-2" definition = submarine start_experience_factor = 0.3 equipment = { ship_hull_submarine_2 = { amount = 1 owner = ALM version_name = "Podolskiya Riggich Class" } } }
+			ship = { name = "P-3" definition = submarine start_experience_factor = 0.3 equipment = { ship_hull_submarine_2 = { amount = 1 owner = ALM version_name = "Podolskiya Riggich Class" } } }
+			ship = { name = "P-4" definition = submarine start_experience_factor = 0.3 equipment = { ship_hull_submarine_2 = { amount = 1 owner = ALM version_name = "Podolskiya Riggich Class" } } }
+			# 2. Flotiliya podvodnitsi
+			ship = { name = "P-5" definition = submarine start_experience_factor = 0.3 equipment = { ship_hull_submarine_2 = { amount = 1 owner = ALM version_name = "Podolskiya Riggich Class" } } }
+			ship = { name = "P-6" definition = submarine start_experience_factor = 0.3 equipment = { ship_hull_submarine_2 = { amount = 1 owner = ALM version_name = "Podolskiya Riggich Class" } } }
+			ship = { name = "P-7" definition = submarine start_experience_factor = 0.3 equipment = { ship_hull_submarine_2 = { amount = 1 owner = ALM version_name = "Podolskiya Riggich Class" } } }
+			ship = { name = "P-8" definition = submarine start_experience_factor = 0.3 equipment = { ship_hull_submarine_2 = { amount = 1 owner = ALM version_name = "Podolskiya Riggich Class" } } }
+		}
+		task_force = {
+			name = "II. Flotiliya podvodnitsi"
+			location = 9783  # Varna
+			# 3. Flotiliya podvodnitsi
+			ship = { name = "P-9" definition = submarine start_experience_factor = 0.3 equipment = { ship_hull_submarine_2 = { amount = 1 owner = ALM version_name = "Podolskiya Riggich Class" } } }
+			ship = { name = "P-10" definition = submarine start_experience_factor = 0.3 equipment = { ship_hull_submarine_2 = { amount = 1 owner = ALM version_name = "Podolskiya Riggich Class" } } }
+			ship = { name = "P-11" definition = submarine start_experience_factor = 0.3 equipment = { ship_hull_submarine_2 = { amount = 1 owner = ALM version_name = "Podolskiya Riggich Class" } } }
+			# 4. Flotiliya podvodnitsi
+			ship = { name = "P-12" definition = submarine start_experience_factor = 0.3 equipment = { ship_hull_submarine_2 = { amount = 1 owner = ALM version_name = "Podolskiya Riggich Class" } } }
+			ship = { name = "P-13" definition = submarine start_experience_factor = 0.3 equipment = { ship_hull_submarine_2 = { amount = 1 owner = ALM version_name = "Podolskiya Riggich Class" } } }
+			ship = { name = "P-14" definition = submarine start_experience_factor = 0.3 equipment = { ship_hull_submarine_2 = { amount = 1 owner = ALM version_name = "Podolskiya Riggich Class" } } }
+			ship = { name = "P-15" definition = submarine start_experience_factor = 0.3 equipment = { ship_hull_submarine_2 = { amount = 1 owner = ALM version_name = "Podolskiya Riggich Class" } } }
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+
+#####################

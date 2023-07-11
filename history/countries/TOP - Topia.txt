@@ -1,0 +1,526 @@
+﻿capital = 608
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_oob = "TOP_1936"
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_oob = "TOP_1936_nsb"
+}
+
+load_focus_tree = topia_focus
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "TOP_1936_air_bba"
+		set_technology = {
+			aa_lmg = 1
+			aa_cannon_1 = 1
+			engines_1 = 1
+			engines_2 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			basic_small_airframe = 1
+			iw_medium_airframe = 1
+			basic_medium_airframe = 1
+			iw_large_airframe = 1
+		}
+	else = {
+		set_air_oob = "TOP_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			fighter1 = 1
+			early_bomber = 1
+			tactical_bomber1 = 1
+			strategic_bomber1 = 1
+			CAS1 = 1
+			naval_bomber1 = 1
+		}
+	}
+}
+
+set_party_name = { 
+	ideology = communism
+	name = TOP_communism_party_Topian
+	long_name = TOP_communism_party_topian_long
+}
+set_party_name = { 
+	ideology = fascism
+	name = TOP_fascism_party_Topian
+	long_name = TOP_fascism_party_topian_long
+}
+set_party_name = {
+		ideology = democratic
+		name = TOP_democratic_party
+		long_name = TOP_democratic_party_topian_long
+	}
+set_party_name = {
+		ideology = neutrality
+		name = TOP_neutral_party
+		long_name = TOP_neutral_party_topian_long
+	}
+
+recruit_character = TOP_philipp_i
+recruit_character = TOP_philipp_ii
+recruit_character = TOP_friedek_loselog
+recruit_character = TOP_ki_baochequi
+recruit_character = TOP_hue_hijani
+recruit_character = TOP_bao_bingjaki
+recruit_character = TOP_holko_rifhigt
+recruit_character = TOP_torguf_hirlja
+recruit_character = TOP_gukut_lixbon
+
+
+add_ideas = {
+   war_economy
+   limited_exports
+   ALM_empire
+   TOP_bad_economy
+   TOP_no_constitution
+   TOP_language_issues
+}
+
+add_equipment_to_stockpile = {
+    type = infantry_equipment_0
+    amount = 40000
+    producer = TOP
+}
+add_equipment_to_stockpile = {
+    type = infantry_equipment_1
+    amount = 20000
+    producer = TOP
+}
+add_equipment_to_stockpile = {
+    type = motorized_equipment_1
+    amount = 1000
+    producer = TOP
+}
+add_equipment_to_stockpile = {
+    type = anti_air_equipment_1
+    amount = 400
+    producer = TOP
+}
+add_equipment_to_stockpile = {
+    type = anti_tank_equipment_1
+    amount = 700
+    producer = TOP
+}
+add_equipment_to_stockpile = {
+    type = artillery_equipment_1
+    amount = 2000
+    producer = TOP
+}
+add_equipment_to_stockpile = {
+    type = artillery_equipment_2
+    amount = 1000
+    producer = TOP
+}
+
+set_research_slots = 3
+
+starting_train_buffer = 2
+set_fuel_ratio = 0.8
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_mountaineers = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1
+	mobile_warfare = 1
+	trade_interdiction = 1
+	formation_flying = 1
+
+	synth_oil_experiments = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		improved_light_tank = 1
+		basic_heavy_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		engine_tech_1 = 1
+	}
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		early_battleship = 1
+		basic_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+	set_naval_oob = "TOP_naval_legacy"
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		panzerschiffe = 1
+		pre_dreadnoughts = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		mtg_transport = 1
+		basic_torpedo = 1
+		improved_ship_torpedo_launcher = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_depth_charges = 1
+		sonar = 1
+		basic_cruiser_armor_scheme = 1
+	}
+	set_naval_oob = "TOP_naval"
+}
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+
+set_war_support = 60
+set_stability = 70
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    fascism = 45
+    communism = 12
+	neutrality = 43
+}
+
+set_convoys = 426
+
+set_political_power = 100
+
+###TANK MODELS
+if = {
+		limit = {
+			has_dlc = "No Step Back"
+		}
+		create_equipment_variant = {
+		name = "Shinkitsi"
+		type = light_tank_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_auto_cannon
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 4
+			tank_nsb_armor_upgrade = 2
+		}
+		icon = "gfx/interface/technologies/ger_imp_light_tank.dds"
+	}
+
+		create_equipment_variant = {
+		name = "Kopitsi"
+		type = light_tank_chassis_2
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_auto_cannon
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 4
+			tank_nsb_armor_upgrade = 3
+		}
+		icon = "gfx/interface/technologies/ger_imp_light_tank.dds"
+	}
+
+	}
+
+###SHIP MODELS
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	### Ship Variants ###
+	## 1936 Start ##
+	# Submarines #
+	create_equipment_variant = {
+			name = "Solius Class"
+			type = submarine_1
+			parent_version = 0
+			upgrades = {
+				ship_reliability_upgrade = 3
+				sub_engine_upgrade = 3
+				sub_stealth_upgrade = 1
+				sub_torpedo_upgrade = 2
+			}
+		}
+	# Destroyers #
+	create_equipment_variant = {
+			name = "Lakar Class"
+			type = destroyer_2
+			parent_version = 0
+			upgrades = {
+				ship_torpedo_upgrade = 2
+				destroyer_engine_upgrade = 4
+				ship_ASW_upgrade = 2
+				ship_anti_air_upgrade = 2
+			}
+		}
+	# Light Cruisers #
+	create_equipment_variant = {
+		name = "Poliar Class"
+		type = light_cruiser_2
+		parent_version = 0
+		upgrades = {
+			ship_reliability_upgrade = 3
+			ship_engine_upgrade = 4
+			ship_gun_upgrade = 3
+			ship_anti_air_upgrade = 3
+		}
+	}
+	create_equipment_variant = {
+			name = "Schantai Class"
+			type = light_cruiser_2
+			parent_version = 0
+			upgrades = {
+				ship_reliability_upgrade = 4
+				ship_engine_upgrade = 3
+				ship_gun_upgrade = 3
+				ship_anti_air_upgrade = 5
+			}
+		}
+	# Heavy Cruisers #
+	create_equipment_variant = {
+		name = "Kalaman Soliman Class"
+		type = heavy_cruiser_1
+		parent_version = 0
+		upgrades = {
+			ship_reliability_upgrade = 3
+			ship_engine_upgrade = 4
+			ship_armor_upgrade = 5
+			ship_gun_upgrade = 4
+		}
+	}
+	# Battleships #
+	create_equipment_variant = {
+			name = "Gindar Class"
+			type = battleship_1
+			parent_version = 0
+			upgrades = {
+				ship_reliability_upgrade = 4
+				ship_engine_upgrade = 3
+				ship_armor_upgrade = 4
+				ship_gun_upgrade = 4
+			}
+		}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		create_equipment_variant = {
+		name = "Lakar Class"
+		type = ship_hull_light_2
+		name_group = TOP_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = ship_sonar_1
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+		create_equipment_variant = {
+		name = "Solius Class"
+		type = ship_hull_submarine_2
+		name_group = TOP_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_2
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_torpedo_sub_2
+		}
+	}
+		create_equipment_variant = {
+		name = "Poliar Class"
+		type = ship_hull_cruiser_2
+		name_group = TOP_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = ship_sonar_1
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_light_medium_battery_1
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+	}
+		create_equipment_variant = {
+		name = "Schantai Class"
+		type = ship_hull_cruiser_2
+		name_group = TOP_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = ship_sonar_1
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			front_1_custom_slot = ship_anti_air_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_light_medium_battery_1
+			rear_1_custom_slot = ship_airplane_launcher_1
+		}
+	}
+		create_equipment_variant = {
+		name = "Kalaman Soliman Class"
+		type = ship_hull_cruiser_2
+		name_group = TOP_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = ship_sonar_1
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_2
+			front_1_custom_slot = ship_anti_air_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_airplane_launcher_1
+			rear_1_custom_slot = ship_medium_battery_2
+		}
+	}
+		create_equipment_variant = {
+		name = "Gindar Class"
+		type = ship_hull_heavy_2
+		name_group = TOP_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_2
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bb_1
+			front_1_custom_slot = ship_anti_air_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = ship_secondaries_1
+			rear_1_custom_slot = ship_heavy_battery_2
+		}
+	}
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	create_equipment_variant = {
+		name = "Navall Poltar"
+		type = small_plane_naval_bomber_airframe_1
+		modules = {
+			fixed_main_weapon_slot = torpedo_mounting
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = lmg_defense_turret
+			special_type_slot_2 = floats
+		}
+		icon = "GFX_GER_naval_bomber1_medium"
+	}
+	create_equipment_variant = {
+				name = "Rattata"
+				type = small_plane_airframe_1
+				modules = {
+					fixed_main_weapon_slot = light_mg_2x
+					engine_type_slot = engine_2_1x
+					special_type_slot_1 = empty
+				}
+			}
+			create_equipment_variant = {
+				name = "Porklavis"
+				type = small_plane_cas_airframe_1
+				modules = {
+					fixed_main_weapon_slot = small_bomb_bay
+					engine_type_slot = engine_2_1x
+					special_type_slot_1 = empty
+				}
+			}
+			create_equipment_variant = {
+				name = "Regular Poltar"
+				type = small_plane_naval_bomber_airframe_1
+				modules = {
+					fixed_main_weapon_slot = torpedo_mounting
+					fixed_auxiliary_weapon_slot_1 = bomb_locks
+					engine_type_slot = engine_2_1x
+					special_type_slot_1 = fuel_tanks_small
+				}
+				icon = "GFX_JAP_cv_naval_bomber1_medium"
+			}
+		}
+}
