@@ -1,0 +1,42 @@
+spriteTypes = {	
+
+
+
+	SpriteType = {
+		name = "GFX_plague_outbreak"
+		texturefile = "gfx/event_pictures/plague_outbreak.dds"
+	}
+	SpriteType = {
+		name = "GFX_lgbtq_rights"
+		texturefile = "gfx/event_pictures/lgbtq_rights.dds"
+	}
+	SpriteType = {
+		name = "GFX_religion"
+		texturefile = "gfx/event_pictures/religion.dds"
+	}
+	SpriteType = {
+		name = "GFX_legal"
+		texturefile = "gfx/event_pictures/legal.dds"
+	}
+	SpriteType = {
+		name = "GFX_governed"
+		texturefile = "gfx/event_pictures/goverment.dds"
+	}
+	SpriteType = {
+		name = "GFX_distribute"
+		texturefile = "gfx/event_pictures/distribute.dds"
+	}
+	SpriteType = {
+		name = "GFX_liberty"
+		texturefile = "gfx/event_pictures/liberty.dds"
+	}
+	SpriteType = {
+		name = "GFX_absolutism"
+		texturefile = "gfx/event_pictures/absolutism.dds"
+	}
+	SpriteType = {
+		name = "GFX_is"
+		texturefile = "gfx/event_pictures/is.dds"
+	}
+}
+
