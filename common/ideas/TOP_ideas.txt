@@ -1,0 +1,477 @@
+ideas = {
+
+	country = {
+	
+	TOP_extra_conscription = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_eng_imperial_conscription
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.015
+                recruitable_population_factor 0.15
+                non_core_manpower = 0.10
+			}
+		}
+	TOP_no_constitution = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_TOP_no_constitution
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.25
+				political_power_cost = 0.5
+				political_power_factor = -0.3
+				stability_weekly = -0.001
+			}
+		}
+	TOP_bad_economy = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_top_poor_economy
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.25
+				war_support_factor = -0.30
+				consumer_goods_factor = 0.4
+				production_speed_buildings_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.2
+				production_factory_max_efficiency_factor = -0.2
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.05
+			}
+		}
+	TOP_bad_economy1 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_top_poor_economy
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.20
+				war_support_factor = -0.20
+				consumer_goods_factor = 0.35
+				production_speed_buildings_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.15
+				production_factory_max_efficiency_factor = -0.15
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.05
+			}
+		}
+	TOP_bad_economy2 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_top_poor_economy
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = -0.10
+				consumer_goods_factor = 0.3
+				production_speed_buildings_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+			}
+		}
+	TOP_bad_economy3 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_top_poor_economy
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = -0.05
+				consumer_goods_factor = 0.2
+				production_speed_buildings_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+			}
+		}
+	TOP_con_eco = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_TOP_growing_economy1
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+	TOP_con_eco1 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_TOP_growing_economy_2
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+			}
+		}
+	TOP_con_eco2 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_generic_economic_increase
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.2
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
+			}
+		}
+	TOP_export_profits = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_generic_economic_increase
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+	TOP_clamp_fascist = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_oppression
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = -0.1
+				consumer_goods_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+
+	TOP_educated_masses = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_production_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.2
+			}
+		}
+
+	TOP_infrastructur_project = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_generic_build_infrastructure
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_infrastructure_factor = 0.2
+				production_speed_rail_way_factor = 0.2
+			}
+		}
+	TOP_beijing_roads = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_generic_build_infrastructure
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.5
+				production_speed_rail_way_factor = 0.3
+				stability_factor = 0.1
+				supply_factor = 0.1
+				army_fuel_consumption_factor = -0.1
+				truck_attrition = -0.5
+			}
+		}
+	TOP_topia_blorp = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_topia_blorp
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05 
+			}
+		}
+	TOP_fascism_waning = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = spr_anti_fascist_crusade
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = -0.1
+			}
+		}
+	TOP_searching_oil = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_generic_stockpile_fuel
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+	TOP_language_issues = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_TOP_language_issues
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				political_power_factor = -0.3
+				political_power_cost = 0.5
+				democratic_drift = 0.1
+				fascism_drift = 0.1
+			}
+		}
+	TOP_language_issues_2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_TOP_language_divide
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				political_power_factor = -0.2
+				political_power_cost = 0.4
+				democratic_drift = 0.09
+				fascism_drift = 0.09
+			}
+		}
+	TOP_language_issues_3 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_TOP_language_divide
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.03
+				stability_factor = -0.03
+				war_support_factor = -0.03
+				political_power_factor = -0.1
+				political_power_cost = 0.2
+				democratic_drift = 0.07
+				fascism_drift = 0.07
+			}
+		}
+	TOP_language_issues_4 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_TOP_language_divide
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.1
+				democratic_drift = 0.05
+				fascism_drift = 0.05
+			}
+		}
+	TOP_language_issues_5 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_TOP_language_divide
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.1
+			}
+		}
+  }
+}

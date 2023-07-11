@@ -1,0 +1,3814 @@
+﻿focus_tree = {
+	id = topia_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = TOP
+		}
+	}
+
+## THE START
+
+	focus = {
+		id = TOP_write_constitution
+		icon = GFX_focus_generic_treaty
+		x = 60
+		y = 0
+		cost = 2
+		ai_will_do = {
+			factor = 30
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_political_power = 150
+	}
+}
+	focus = {
+		id = TOP_religion
+		icon = GFX_focus_religion
+		prerequisite = { focus = TOP_write_constitution }
+		x = 1
+		y = 1
+		relative_position_id = TOP_write_constitution
+		cost = 2
+		ai_will_do = {
+			factor = 30
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		country_event = {
+		   id = TOP_event.0
+		}
+	}
+}
+	focus = {
+		id = TOP_lgbtq
+		icon = GFX_focus_lgbtq_rights
+		prerequisite = { focus = TOP_religion }
+		x = 0
+		y = 1
+		relative_position_id = TOP_religion
+		cost = 1
+		ai_will_do = {
+			factor = 30
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		country_event = {
+		   id = TOP_event.1
+		}
+	}
+}
+	focus = {
+		id = TOP_law
+		icon = GFX_focus_generic_court
+		prerequisite = { focus = TOP_write_constitution }
+		x = 3
+		y = 1
+		relative_position_id = TOP_write_constitution
+		cost = 4
+		ai_will_do = {
+			factor = 30
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		country_event = {
+		   id = TOP_event.2
+		}
+	}
+}
+	focus = {
+		id = TOP_freedom_and_rights
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = TOP_law }
+		x = 0
+		y = 1
+		relative_position_id = TOP_law
+		cost = 6
+		ai_will_do = {
+			factor = 30
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		country_event = {
+		   id = TOP_event.3
+		}
+	}
+}
+	focus = {
+		id = TOP_governing_system
+		icon = GFX_focus_generic_improve_the_administration
+		prerequisite = { focus = TOP_write_constitution }
+		x = -1
+		y = 1
+		relative_position_id = TOP_write_constitution
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		country_event = {
+		   id = TOP_event.4
+		}
+	}
+}
+	focus = {
+		id = TOP_emperors_powers
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = TOP_governing_system }
+		x = 0
+		y = 1
+		relative_position_id = TOP_governing_system
+		cost = 3
+		ai_will_do = {
+			factor = 30
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		country_event = {
+		   id = TOP_event.5
+		}
+	}
+}
+	focus = {
+		id = TOP_power_distribution
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = { focus = TOP_write_constitution }
+		x = -3
+		y = 1
+		relative_position_id = TOP_write_constitution
+		cost = 3
+		ai_will_do = {
+			factor = 30
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		country_event = {
+		   id = TOP_event.6
+		}
+	}
+}
+	focus = {
+		id = TOP_changing_constitution_enacting_laws
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = TOP_power_distribution }
+		x = 0
+		y = 1
+		relative_position_id = TOP_power_distribution
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		country_event = {
+		   id = TOP_event.7
+		}
+	}
+}
+	focus = {
+		id = TOP_finshing_constitution
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { 
+		focus = TOP_lgbtq }
+		prerequisite = { focus = TOP_freedom_and_rights }
+		prerequisite = { focus = TOP_emperors_powers }
+		prerequisite = { focus = TOP_changing_constitution_enacting_laws }
+		x = 1
+		y = 1
+		relative_position_id = TOP_emperors_powers
+		cost = 3
+		ai_will_do = {
+			factor = 30
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_political_power = 150
+		remove_ideas = TOP_no_constitution
+	}
+}
+#
+#POLITICAL DECISIONS
+#   
+	focus = {
+		id = TOP_election_prepare
+		icon = GFX_focus_generic_horse_studs
+		prerequisite = { focus = TOP_finshing_constitution }
+		x = -20
+		y = 1
+		relative_position_id = TOP_finshing_constitution
+		cost = 1
+		ai_will_do = {
+			factor = 30
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_political_power = -100
+		add_popularity = {
+		ideology = neutrality
+		popularity = 0.05
+		}
+		add_stability = 0.05
+	}
+}
+	focus = {
+		id = TOP_election_kaiser
+		icon = GFX_focus_generic_monarchy_2
+		prerequisite = { focus = TOP_election_prepare }
+		mutually_exclusive = { focus = TOP_election_democracy }
+		mutually_exclusive = { focus = TOP_election_fascism }
+		mutually_exclusive = { focus = TOP_election_prepare_communism }
+		x = -3
+		y = 1
+		relative_position_id = TOP_election_prepare
+		cost = 1
+		ai_will_do = {
+			factor = 30
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_political_power = -50
+		add_popularity = {
+		ideology = neutrality
+		popularity = 0.1
+		}
+		add_stability = 0.05
+	}
+}
+	focus = {
+		id = TOP_election_democracy
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = TOP_election_prepare }
+		mutually_exclusive = { focus = TOP_election_kaiser }
+		mutually_exclusive = { focus = TOP_election_fascism }
+		mutually_exclusive = { focus = TOP_election_prepare_communism }
+		x = 3
+		y = 1
+		relative_position_id = TOP_election_prepare
+		cost = 1
+		ai_will_do = {
+			factor = 30
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_political_power = -100
+		add_popularity = {
+		ideology = democratic
+		popularity = 0.1
+		}
+		add_stability = -0.05
+	}
+}
+	focus = {
+		id = TOP_election_fascism
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = TOP_election_prepare }
+		mutually_exclusive = { focus = TOP_election_democracy }
+		mutually_exclusive = { focus = TOP_election_kaiser }
+		mutually_exclusive = { focus = TOP_election_prepare_communism }
+		x = -1
+		y = 1
+		relative_position_id = TOP_election_prepare
+		cost = 1
+		ai_will_do = {
+			factor = 30
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_political_power = -100
+		add_popularity = {
+		ideology = fascism
+		popularity = 0.1
+		}
+		add_popularity = {
+		ideology = neutrality
+		popularity = -0.1
+		}
+		add_stability = -0.05
+	}
+}
+	focus = {
+		id = TOP_election_prepare_communism
+		icon = GFX_focus_generic_infiltration
+		prerequisite = { focus = TOP_election_prepare }
+		mutually_exclusive = { focus = TOP_election_democracy }
+		mutually_exclusive = { focus = TOP_election_kaiser }
+		mutually_exclusive = { focus = TOP_election_fascism }
+		x = 1
+		y = 1
+		relative_position_id = TOP_election_prepare
+		cost = 1
+		ai_will_do = {
+			factor = 30
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_political_power = -100
+		add_popularity = {
+		ideology = communism
+		popularity = 0.1
+		}
+		add_stability = -0.05
+	}
+}
+	focus = {
+		id = TOP_election_announce
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TOP_election_prepare_communism focus = TOP_election_kaiser focus = TOP_election_democracy focus = TOP_election_fascism }
+		x = -1
+		y = 1
+		relative_position_id = TOP_election_prepare_communism
+		cost = 1
+		ai_will_do = {
+			factor = 30
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_political_power = -100
+		add_popularity = {
+		ideology = neutrality
+		popularity = 0.05
+		}
+		add_stability = 0.05
+	}
+}
+
+	focus = {
+		id = TOP_political_decisions
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = TOP_election_announce }
+		x = 0
+		y = 1
+		relative_position_id = TOP_election_announce
+		cost = 1
+		ai_will_do = {
+			factor = 30
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		country_event = TOP_event.8
+	}
+}
+
+	focus = {
+		id = TOP_stay_with_the_kaiser
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TOP_political_decisions }
+		mutually_exclusive = { focus = TOP_give_in_to_the_facists }
+		mutually_exclusive = {focus = TOP_get_democratic }
+		mutually_exclusive = {focus = TOP_the_communist_route }
+		x = -12
+		y = 1
+		relative_position_id = TOP_political_decisions
+		cost = 2
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+			 always = no
+		}
+
+		completion_reward = {
+		add_popularity = {
+		ideology = neutrality
+		popularity = 0.1
+		}
+		}
+	}
+	focus = {
+		id = TOP_dealing_with_language
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TOP_stay_with_the_kaiser }
+		x = 6
+		y = 1
+		relative_position_id = TOP_stay_with_the_kaiser
+		cost = 2
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		add_political_power = 50
+		add_stability = 0.05
+		}
+	}   
+	focus = {
+		id = TOP_official_definition
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = TOP_dealing_with_language }
+		x = -1
+		y = 1
+		relative_position_id = TOP_dealing_with_language
+		cost = 5
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		add_political_power = 100
+		add_stability = 0.1
+		add_popularity = {
+		ideology = neutrality
+		popularity = 0.1
+		}
+		}
+	}
+	focus = {
+		id = TOP_instill_pride
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TOP_official_definition }
+		x = -1
+		y = 1
+		relative_position_id = TOP_official_definition
+		cost = 5
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		add_political_power = 200
+		add_popularity = {
+		ideology = neutrality
+		popularity = 0.1
+		}
+		}
+	}
+	focus = {
+		id = TOP_our_own_propaganda
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TOP_instill_pride }
+		prerequisite = { focus = TOP_restrict_languages }
+		x = 1
+		y = 1
+		relative_position_id = TOP_instill_pride
+		cost = 5
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		add_political_power = -100
+		add_popularity = {
+		ideology = neutrality
+		popularity = 0.1
+		}
+		}
+	}
+	focus = {
+		id = TOP_restrict_languages
+		icon = GFX_goal_continuous_restrict_freedom
+		prerequisite = { focus = TOP_official_definition }
+		prerequisite = { focus = TOP_open_language_schools }
+		x = 1
+		y = 1
+		relative_position_id = TOP_official_definition
+		cost = 5
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		add_political_power = 100
+		add_stability = -0.1
+		if = {
+			limit = {
+				has_idea = TOP_language_issues
+			}
+		swap_ideas = {
+		add_idea = TOP_language_issues_2
+		remove_idea = TOP_language_issues
+		}
+		}
+		else_if = {
+			limit = {
+				has_idea = TOP_language_issues_2
+			}
+		swap_ideas = {
+		add_idea = TOP_language_issues_3
+		remove_idea = TOP_language_issues_2
+		}
+		}
+		else_if = {
+			limit = {
+				has_idea = TOP_language_issues_3
+			}
+		swap_ideas = {
+		add_idea = TOP_language_issues_4
+		remove_idea = TOP_language_issues_3
+		}
+		}
+	}
+	}
+	focus = {
+		id = TOP_open_language_schools
+		icon = GFX_goal_continuous_research
+		prerequisite = { focus = TOP_dealing_with_language }
+		x = 1
+		y = 1
+		relative_position_id = TOP_dealing_with_language
+		cost = 5
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		swap_ideas = {
+			add_idea = TOP_language_issues_2
+			remove_idea = TOP_language_issues
+		}
+		}
+	}
+	focus = {
+		id = TOP_reward_learning_language
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = TOP_open_language_schools }
+		x = 1
+		y = 1
+		relative_position_id = TOP_open_language_schools
+		cost = 5
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		add_political_power = -200
+		if = {
+			limit = {
+				has_idea = TOP_language_issues
+			}
+		swap_ideas = {
+		add_idea = TOP_language_issues_2
+		remove_idea = TOP_language_issues
+		}
+		}
+		else_if = {
+			limit = {
+				has_idea = TOP_language_issues_2
+			}
+		swap_ideas = {
+		add_idea = TOP_language_issues_3
+		remove_idea = TOP_language_issues_2
+		}
+		}
+		else_if = {
+			limit = {
+				has_idea = TOP_language_issues_3
+			}
+		swap_ideas = {
+		add_idea = TOP_language_issues_4
+		remove_idea = TOP_language_issues_3
+		}
+		}
+		}
+	}
+	focus = {
+		id = TOP_stop_party_spread
+		icon = GFX_focus_generic_national_security
+		prerequisite = { focus = TOP_reward_learning_language }
+		prerequisite = { focus = TOP_restrict_languages }
+		x = -1
+		y = 1
+		relative_position_id = TOP_reward_learning_language
+		cost = 5
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		add_stability = 0.1
+		add_political_power = 100
+		swap_ideas = {
+		add_idea = TOP_language_issues_5
+		remove_idea = TOP_language_issues_4
+		}
+		}
+	}
+	focus = {
+		id = TOP_topian_official_language
+		icon = GFX_focus_TOP_official_language
+		prerequisite = { focus = TOP_stop_party_spread }
+		prerequisite = { focus = TOP_our_own_propaganda }
+		x = -1
+		y = 1
+		relative_position_id = TOP_stop_party_spread
+		cost = 5
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		add_stability = 0.1
+		add_political_power = 100
+		remove_ideas = TOP_language_issues_5
+		}
+	}
+
+
+	focus = {
+		id = TOP_economic_policy
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = TOP_stay_with_the_kaiser }
+		x = 0
+		y = 1
+		relative_position_id = TOP_stay_with_the_kaiser
+		cost = 2
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		country_event = TOP_event.10
+	}
+}
+	focus = {
+		id = TOP_export_economy
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = TOP_economic_policy }
+		mutually_exclusive = {focus = TOP_consumer_economy }
+		x = 2
+		y = 1
+		relative_position_id = TOP_economic_policy
+		cost = 2
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		always = no
+		}
+
+		completion_reward = {
+		if = {
+			limit = {
+				has_idea = limited_exports
+			}
+		swap_ideas = {
+		add_idea = export_focus
+		remove_idea = limited_exports
+		}
+		}
+		else_if = {
+			limit = {
+				has_idea = export_focus
+			}
+		swap_ideas = {
+		add_idea = free_trade
+		remove_idea = export_focus
+		}
+		}
+		else_if = {
+			limit = {
+				has_idea = closed_economy
+			}
+		swap_ideas = {
+		add_idea = export_focus
+		remove_idea = closed_economy
+		}
+		}
+	}
+}
+	focus = {
+		id = TOP_attract_investors
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = TOP_export_economy  focus = TOP_consumer_economy }
+		x = -2
+		y = 1
+		relative_position_id = TOP_export_economy
+		cost = 2
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		add_political_power = 100
+		if = {
+			limit = {
+				has_idea = TOP_bad_economy
+			}
+		swap_ideas = {
+		add_idea = TOP_bad_economy1
+		remove_idea = TOP_bad_economy
+		}
+		}
+		else_if = {
+			limit = {
+				has_idea = TOP_bad_economy1
+			}
+		swap_ideas = {
+		add_idea = TOP_bad_economy2
+		remove_idea = TOP_bad_economy1
+		}
+		}
+		else_if = {
+			limit = {
+				has_idea = TOP_bad_economy2
+			}
+		swap_ideas = {
+		add_idea = TOP_bad_economy3
+		remove_idea = TOP_bad_economy2
+		}
+		}
+		else_if = {
+			limit = {
+				has_idea = TOP_bad_economy3
+			}
+		remove_ideas = TOP_bad_economy3
+		}
+	}
+}
+	focus = {
+		id = TOP_expand_manufacturing
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = TOP_attract_investors }
+		prerequisite = { focus = TOP_export_economy }
+		x = 2
+		y = 1
+		relative_position_id = TOP_attract_investors
+		cost = 8
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		add_political_power = -50
+		if = {
+			limit = {
+				controls_state = 608
+				controls_state = 613
+			}
+		608 = {
+		add_extra_state_shared_building_slots = 5
+		add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+		}
+		613 = {
+		add_extra_state_shared_building_slots = 5
+		add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+		}
+		}
+		if = {
+			limit = {
+				has_idea = TOP_bad_economy
+			}
+		swap_ideas = {
+		add_idea = TOP_bad_economy1
+		remove_idea = TOP_bad_economy
+		}
+		}
+		else_if = {
+			limit = {
+				has_idea = TOP_bad_economy1
+			}
+		swap_ideas = {
+		add_idea = TOP_bad_economy2
+		remove_idea = TOP_bad_economy1
+		}
+		}
+		else_if = {
+			limit = {
+				has_idea = TOP_bad_economy2
+			}
+		swap_ideas = {
+		add_idea = TOP_bad_economy3
+		remove_idea = TOP_bad_economy2
+		}
+		}
+		else_if = {
+			limit = {
+				has_idea = TOP_bad_economy3
+			}
+		remove_ideas = TOP_bad_economy3
+		}
+	}
+}
+	focus = {
+		id = TOP_prepare_ports_for_exports
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		prerequisite = { focus = TOP_expand_manufacturing }
+		x = 0
+		y = 1
+		relative_position_id = TOP_expand_manufacturing
+		cost = 6
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		add_political_power = -50
+		if = {
+			limit = {
+				controls_state = 525
+				controls_state = 613
+				controls_state = 596
+				controls_state = 524
+			}
+		613 = {
+		add_building_construction = {
+					type = naval_base
+					province = 7014
+					level = 4
+					instant_build = yes
+				}
+		}
+		524 = {
+		add_building_construction = {
+					type = naval_base
+					province = 7186
+					level = 10
+					instant_build = yes
+				}
+		}
+		525 = {
+		add_building_construction = {
+					type = naval_base
+					province = 4056
+					level = 7
+					instant_build = yes
+				}
+		}
+		596 = {
+		add_building_construction = {
+					type = naval_base
+					province = 9974
+					level = 7
+					instant_build = yes
+				}
+		}
+		}
+		if = {
+			limit = {
+				has_idea = TOP_bad_economy
+			}
+		swap_ideas = {
+		add_idea = TOP_bad_economy1
+		remove_idea = TOP_bad_economy
+		}
+		}
+		else_if = {
+			limit = {
+				has_idea = TOP_bad_economy1
+			}
+		swap_ideas = {
+		add_idea = TOP_bad_economy2
+		remove_idea = TOP_bad_economy1
+		}
+		}
+		else_if = {
+			limit = {
+				has_idea = TOP_bad_economy2
+			}
+		swap_ideas = {
+		add_idea = TOP_bad_economy3
+		remove_idea = TOP_bad_economy2
+		}
+		}
+		else_if = {
+			limit = {
+				has_idea = TOP_bad_economy3
+			}
+		remove_ideas = TOP_bad_economy3
+		}
+		add_ideas = TOP_export_profits
+	}
+}
+	focus = {
+		id = TOP_consumer_economy
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = TOP_economic_policy }
+		mutually_exclusive = {focus = TOP_export_economy }
+		x = -2
+		y = 1
+		relative_position_id = TOP_economic_policy
+		cost = 2
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		always = no
+		}
+
+		completion_reward = {
+		add_ideas = TOP_con_eco
+	}
+}
+	focus = {
+		id = TOP_subsidise_private_businesses
+		icon = GFX_focus_mex_privatisation
+		prerequisite = { focus = TOP_attract_investors }
+		prerequisite = { focus = TOP_consumer_economy }
+		x = -2
+		y = 1
+		relative_position_id = TOP_attract_investors
+		cost = 5
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		add_political_power = -50
+		swap_ideas = {
+		add_idea = TOP_con_eco1
+		remove_idea = TOP_con_eco
+		}
+		if = {
+			limit = {
+				controls_state = 610
+				controls_state = 527
+			}
+		610 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		}
+		527 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		}
+		528 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		}
+		596 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		}
+		597 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		}
+		743 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		}
+		745 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		}
+		}
+		if = {
+			limit = {
+				has_idea = TOP_bad_economy
+			}
+		swap_ideas = {
+		add_idea = TOP_bad_economy1
+		remove_idea = TOP_bad_economy
+		}
+		}
+		else_if = {
+			limit = {
+				has_idea = TOP_bad_economy1
+			}
+		swap_ideas = {
+		add_idea = TOP_bad_economy2
+		remove_idea = TOP_bad_economy1
+		}
+		}
+		else_if = {
+			limit = {
+				has_idea = TOP_bad_economy2
+			}
+		swap_ideas = {
+		add_idea = TOP_bad_economy3
+		remove_idea = TOP_bad_economy2
+		}
+		}
+		else_if = {
+			limit = {
+				has_idea = TOP_bad_economy3
+			}
+		remove_ideas = TOP_bad_economy3
+		}
+	}
+}
+	focus = {
+		id = TOP_import_foreign_machinery
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = TOP_subsidise_private_businesses }
+		x = 0
+		y = 1
+		relative_position_id = TOP_subsidise_private_businesses
+		cost = 7
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		add_political_power = -50
+		swap_ideas = {
+		add_idea = TOP_con_eco2
+		remove_idea = TOP_con_eco1
+		}
+		if = {
+			limit = {
+				has_idea = TOP_bad_economy
+			}
+		swap_ideas = {
+		add_idea = TOP_bad_economy1
+		remove_idea = TOP_bad_economy
+		}
+		}
+		else_if = {
+			limit = {
+				has_idea = TOP_bad_economy1
+			}
+		swap_ideas = {
+		add_idea = TOP_bad_economy2
+		remove_idea = TOP_bad_economy1
+		}
+		}
+		else_if = {
+			limit = {
+				has_idea = TOP_bad_economy2
+			}
+		swap_ideas = {
+		add_idea = TOP_bad_economy3
+		remove_idea = TOP_bad_economy2
+		}
+		}
+		else_if = {
+			limit = {
+				has_idea = TOP_bad_economy3
+			}
+		remove_ideas = TOP_bad_economy3
+		}
+	}
+}
+	focus = {
+		id = TOP_fin_ref
+		icon = GFX_focus_spa_save_the_alcazar
+		prerequisite = { focus = TOP_import_foreign_machinery  focus = TOP_prepare_ports_for_exports }
+		x = 2
+		y = 1
+		relative_position_id = TOP_import_foreign_machinery
+		cost = 2
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		remove_ideas = TOP_bad_economy3
+		}
+	}
+	focus = {
+		id = TOP_prepare_for_war
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = TOP_fin_ref }
+		prerequisite = { focus = TOP_secure_the_country }
+		prerequisite = { focus = TOP_topian_official_language }
+		x = 6
+		y = 1
+		relative_position_id = TOP_fin_ref
+		cost = 2
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		add_ideas = TOP_extra_conscription
+		}
+	}
+	focus = {
+		id = TOP_develop_korean_arsenals
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = TOP_prepare_for_war }
+		x = 0
+		y = 1
+		relative_position_id = TOP_prepare_for_war
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+		owns_state = 527
+		owns_state = 525
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		527 = {
+		add_extra_state_shared_building_slots = 5
+		add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+		}
+		525 = {
+		add_extra_state_shared_building_slots = 5
+		add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+		}
+		}
+	}
+	focus = {
+		id = TOP_hand_out_modern_weapons
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = TOP_develop_korean_arsenals }
+		x = 0
+		y = 1
+		relative_position_id = TOP_develop_korean_arsenals
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		custom_effect_tooltip = TOP_weapon_handout_tt
+		add_equipment_to_stockpile = {
+    		type = artillery_equipment_2
+    		amount = 1000
+    		producer = TOP
+		}
+		add_equipment_to_stockpile = {
+    		type = infantry_equipment_2
+    		amount = 10000
+    		producer = TOP
+		}
+		add_equipment_to_stockpile = {
+    		type = anti_air_equipment_1
+    		amount = 500
+    		producer = TOP
+		}
+		add_equipment_to_stockpile = {
+    		type = anti_tank_equipment_1
+    		amount = 500
+    		producer = TOP
+		}
+		}
+	}
+	focus = {
+		id = TOP_change_currency
+		icon = GFX_focus_change_currency
+		prerequisite = { focus = TOP_prepare_for_war }
+		x = -5
+		y = 1
+		relative_position_id = TOP_prepare_for_war
+		cost = 6
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		add_ideas = TOP_topia_blorp
+	}
+}
+	focus = {
+		id = TOP_prepare_supply_stashes
+		icon = GFX_focus_SOV_breadbasket_of_the_union
+		prerequisite = { focus = TOP_change_currency }
+		x = 0
+		y = 1
+		relative_position_id = TOP_change_currency
+		cost = 6
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		717 = {
+			add_building_construction = {
+					type = supply_node
+					province = 810
+					level = 1
+				}
+		}
+		596 = {
+			add_building_construction = {
+					type = supply_node
+					province = 7174
+					level = 1
+				}
+			add_building_construction = {
+					type = supply_node
+					province = 9972
+					level = 1
+				}
+			build_railway = {
+			level = 2
+			path = { 7191 10014 10086 7174 9944 9972 7086 1055 }
+			}
+		}
+		612 = {
+			add_building_construction = {
+					type = supply_node
+					province = 1811
+					level = 1
+				}
+		}
+		614 = {
+			add_building_construction = {
+					type = supply_node
+					province = 4208
+					level = 1
+				}
+		}
+			build_railway = {
+			level = 4
+			path = { 12026 6828 4208 }
+			}
+	}
+}
+	focus = {
+		id = TOP_claim_chinese_governement
+		icon = GFX_focus_chi_proclaim_rival_government
+		prerequisite = { focus = TOP_prepare_supply_stashes }
+		prerequisite = { focus = TOP_hand_out_modern_weapons }
+		prerequisite = { focus = TOP_encourage_people_for_war }
+		x = 3
+		y = 1
+		relative_position_id = TOP_prepare_supply_stashes
+		cost = 6
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		custom_effect_tooltip = TOP_claim_china_tt
+		hidden_effect = {
+		CHI = {
+					every_owned_state = {
+						ROOT = { add_state_claim = PREV }
+					}
+				}
+		PRC = {
+					every_owned_state = {
+						ROOT = { add_state_claim = PREV }
+					}
+				}
+		XSM = {
+					every_owned_state = {
+						ROOT = { add_state_claim = PREV }
+					}
+				}
+		GXC = {
+					every_owned_state = {
+						ROOT = { add_state_claim = PREV }
+					}
+				}
+		YUN = {
+					every_owned_state = {
+						ROOT = { add_state_claim = PREV }
+					}
+				}
+		SIK = {
+					every_owned_state = {
+						ROOT = { add_state_claim = PREV }
+					}
+				}
+		add_state_claim = 326
+		add_state_claim = 729
+		add_state_claim = 728
+		}
+	}
+}
+	focus = {
+		id = TOP_reclaim_china
+		icon = GFX_focus_attack_china
+		prerequisite = { focus = TOP_claim_chinese_governement }
+		x = 0
+		y = 1
+		relative_position_id = TOP_claim_chinese_governement
+		cost = 1
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		declare_war_on = {
+    	target = CHI
+    	type = annex_everything
+		}
+		declare_war_on = {
+    	target = PRC
+    	type = annex_everything
+		}
+		declare_war_on = {
+    	target = XSM
+    	type = annex_everything
+		}
+		declare_war_on = {
+    	target = SIK
+    	type = annex_everything
+		}
+		declare_war_on = {
+    	target = YUN
+    	type = annex_everything
+		}
+		declare_war_on = {
+    	target = GXC
+    	type = annex_everything
+		}
+		add_threat = 15
+	}
+}
+	focus = {
+		id = TOP_connect_china
+		icon = GFX_focus_generic_railroad
+		prerequisite = { focus = TOP_reclaim_china }
+		x = 0
+		y = 1
+		relative_position_id = TOP_reclaim_china
+		cost = 15
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		has_war = no
+		custom_trigger_tooltip = {
+			tooltip = TOP_owns_china_tt	
+			owns_state = 621
+            owns_state = 746
+            owns_state = 616
+            owns_state = 622
+            owns_state = 615
+            owns_state = 607
+            owns_state = 606
+            owns_state = 749
+            owns_state = 595
+            owns_state = 600
+            owns_state = 620
+            owns_state = 744
+            owns_state = 593
+            owns_state = 592
+            owns_state = 599
+            owns_state = 594
+            owns_state = 591
+            owns_state = 602
+            owns_state = 750
+            owns_state = 605
+            owns_state = 748
+            owns_state = 603
+            owns_state = 325
+            owns_state = 747
+            owns_state = 751
+            owns_state = 752
+            owns_state = 601
+            owns_state = 283
+            owns_state = 753
+            owns_state = 754
+            owns_state = 756
+            owns_state = 755
+            owns_state = 604
+            owns_state = 759
+            owns_state = 760
+            owns_state = 617
+            owns_state = 618
+            owns_state = 287
+            owns_state = 619
+            }
+		}
+
+		completion_reward = {
+		build_railway = {
+				level = 2
+			path = { 9972 1094 4169 4196 7027 11986 7071 10010 10093 9938 9978 7067 4050 7108 }
+			}
+		build_railway = {
+				level = 1
+			path = { 7108 1047 }
+			}
+		build_railway = {
+				level = 2
+			path = { 1047 11941 4092 4152 1597 4028 10050 7137 4077 10459 1172 1653 4501 }
+			}
+		build_railway = {
+				level = 1
+			path = { 1522 4501 7446 1319 }
+			}
+		build_railway = {
+				level = 2
+			path = { 1319 7294 2067 12819 12705 6999 7240 4925 }
+			}
+		build_railway = {
+				level = 2
+			path = { 1319 4559 7965 12898 10863 4425 }
+			}
+		build_railway = {
+				level = 2
+			path = { 1319 4559 7965 12898 10863 4425 }
+			}
+		build_railway = {
+				level = 2
+			path = { 4925 12141 10841 4999 12837 8104 10856 8059 10741 }
+			}
+		build_railway = {
+				level = 1
+			path = { 1047 12095 1120 9970 }
+			}
+		build_railway = {
+				level = 2
+			path = { 9970 9982 12350 13143 7097 }
+			}
+		build_railway = {
+				level = 2
+			path = { 9970 9942 1053 7199 }
+			}
+		build_railway = {
+				level = 1
+			path = { 7199 7172 4083 3992 7653 1628 }
+			}
+		build_railway = {
+				level = 2
+			path = { 3992 4038 4185 7007 7174 }
+			}
+		build_railway = {
+				level = 2
+			path = { 1628 1036 4619 7637 7035 1083 12061 11994 1146 }
+			}
+		build_railway = {
+				level = 1
+			path = { 1069 4037 10043 7025 7085 }
+			}
+		build_railway = {
+				level = 2
+			path = { 7085 9995 10040 11916 7094 10008 1146 11913 }
+			}
+		build_railway = {
+				level = 2
+				path = { 4190 1188 1169 4144 1139 9958 10364 12012 7568 7580 9934 7167 4619 }
+			}
+		build_railway = {
+				level = 2
+				path = { 4619 4631 9999 7097 10517 7101 7434 10757 7596 8072 7418 }
+			}
+		build_railway = {
+				level = 2
+				path = { 10517 7665 10006 10822 9939 1010 11972 12705 }
+			}
+		build_railway = {
+				level = 2
+				path = { 6999 1893 11865 10144 7418 }
+			}
+		build_railway = {
+				level = 1
+				path = { 7418 7406 5092 1603 1004 10364 4066 7656 10098 4010 7025 }
+			}
+		build_railway = {
+				level = 2
+				path = { 4925 10132 2045 5193 7397 12797 2022 12732 12327 5100 2028 7971 12820 1838 7732 12656 4709 4770 7702 4682 7949 2015 1970 8112 }
+			}
+		build_railway = {
+				level = 2
+				path = { 7418 4167 4295 531 12882 12797 }
+			}
+		build_railway = {
+				level = 2
+				path = { 1519 4634 1034 7208 8049 517 5025 556 6638 1630 12732 }
+			}
+		build_railway = {
+				level = 2
+				path = { 12732 10490 4536 12846 7940 12899 }
+			}
+		build_railway = {
+				level = 2
+				path = { 7940 10865 10315 1943 10911 4973 8112 }
+			}
+		build_railway = {
+				level = 2
+				path = { 4152 7168 10404 4480 10335 10006 }
+			}
+		619 = {
+			add_building_construction = {
+					type = supply_node
+					province = 2015
+					level = 1
+				}
+		}
+		287 = {
+			add_building_construction = {
+					type = supply_node
+					province = 4973
+					level = 1
+				}
+		}
+		601 = {
+			add_building_construction = {
+					type = supply_node
+					province = 10856
+					level = 1
+				}
+		}
+		747 = {
+			add_building_construction = {
+					type = supply_node
+					province = 7965
+					level = 1
+				}
+		}
+		754 = {
+			add_building_construction = {
+					type = supply_node
+					province = 12732
+					level = 1
+				}
+		}
+		605 = {
+			add_building_construction = {
+					type = supply_node
+					province = 6999
+					level = 1
+				}
+		}
+		750 = {
+			add_building_construction = {
+					type = supply_node
+					province = 7101
+					level = 1
+				}
+		}
+	}
+}
+	focus = {
+		id = TOP_develop_china_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TOP_connect_china }
+		x = 0
+		y = 1
+		relative_position_id = TOP_connect_china
+		cost = 15
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		has_war = no
+		custom_trigger_tooltip = {
+			tooltip = TOP_owns_china_tt	
+			owns_state = 621
+            owns_state = 746
+            owns_state = 616
+            owns_state = 622
+            owns_state = 615
+            owns_state = 607
+            owns_state = 606
+            owns_state = 749
+            owns_state = 595
+            owns_state = 600
+            owns_state = 620
+            owns_state = 744
+            owns_state = 593
+            owns_state = 592
+            owns_state = 599
+            owns_state = 594
+            owns_state = 591
+            owns_state = 602
+            owns_state = 750
+            owns_state = 605
+            owns_state = 748
+            owns_state = 603
+            owns_state = 325
+            owns_state = 747
+            owns_state = 751
+            owns_state = 752
+            owns_state = 601
+            owns_state = 283
+            owns_state = 753
+            owns_state = 754
+            owns_state = 756
+            owns_state = 755
+            owns_state = 604
+            owns_state = 759
+            owns_state = 760
+            owns_state = 617
+            owns_state = 618
+            owns_state = 287
+            owns_state = 619
+            }
+		}
+
+		completion_reward = {
+		605 = {
+			add_extra_state_shared_building_slots = 10
+			add_building_construction = {
+					type = industrial_complex 
+					level = 5
+					instant_build = yes
+				}
+		}
+		620 = {
+			add_extra_state_shared_building_slots = 10
+			add_building_construction = {
+					type = industrial_complex 
+					level = 5
+					instant_build = yes
+				}
+		}
+		602 = {
+			add_extra_state_shared_building_slots = 10
+			add_building_construction = {
+					type = industrial_complex 
+					level = 5
+					instant_build = yes
+				}
+		}
+		750 = {
+			add_extra_state_shared_building_slots = 10
+			add_building_construction = {
+					type = industrial_complex 
+					level = 5
+					instant_build = yes
+				}
+		}
+		592 = {
+			add_extra_state_shared_building_slots = 10
+			add_building_construction = {
+					type = industrial_complex 
+					level = 5
+					instant_build = yes
+				}
+		}
+		600 = {
+			add_extra_state_shared_building_slots = 10
+			add_building_construction = {
+					type = industrial_complex 
+					level = 5
+					instant_build = yes
+				}
+		}
+		594 = {
+			add_extra_state_shared_building_slots = 10
+			add_building_construction = {
+					type = industrial_complex 
+					level = 5
+					instant_build = yes
+				}
+		}
+		607 = {
+			add_extra_state_shared_building_slots = 10
+			add_building_construction = {
+					type = industrial_complex 
+					level = 5
+					instant_build = yes
+				}
+		}
+	}
+}
+	focus = {
+		id = TOP_develop_china_resources
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = TOP_develop_china_industry }
+		x = 0
+		y = 1
+		relative_position_id = TOP_develop_china_industry
+		cost = 15
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		has_war = no
+		custom_trigger_tooltip = {
+			tooltip = TOP_owns_china_tt	
+			owns_state = 621
+            owns_state = 746
+            owns_state = 616
+            owns_state = 622
+            owns_state = 615
+            owns_state = 607
+            owns_state = 606
+            owns_state = 749
+            owns_state = 595
+            owns_state = 600
+            owns_state = 620
+            owns_state = 744
+            owns_state = 593
+            owns_state = 592
+            owns_state = 599
+            owns_state = 594
+            owns_state = 591
+            owns_state = 602
+            owns_state = 750
+            owns_state = 605
+            owns_state = 748
+            owns_state = 603
+            owns_state = 325
+            owns_state = 747
+            owns_state = 751
+            owns_state = 752
+            owns_state = 601
+            owns_state = 283
+            owns_state = 753
+            owns_state = 754
+            owns_state = 756
+            owns_state = 755
+            owns_state = 604
+            owns_state = 759
+            owns_state = 760
+            owns_state = 617
+            owns_state = 618
+            owns_state = 287
+            owns_state = 619
+            }
+		}
+
+		completion_reward = {
+		622 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+					type = industrial_complex 
+					level = 2
+					instant_build = yes
+				}
+			add_resource = { 
+					type = tungsten
+					amount = 8
+			}
+			add_resource = { 
+					type = chromium
+					amount = 4
+			}
+			add_resource = { 
+					type = aluminium
+					amount = 8
+			}
+		}
+		615 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+					type = industrial_complex 
+					level = 2
+					instant_build = yes
+				}
+			add_resource = { 
+					type = steel
+					amount = 16
+			}
+			add_resource = { 
+					type = tungsten
+					amount = 8
+			}
+		}
+		617 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+					type = industrial_complex 
+					level = 2
+					instant_build = yes
+				}
+			add_resource = { 
+					type = oil
+					amount = 16
+			}
+		}
+		599 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+					type = industrial_complex 
+					level = 2
+					instant_build = yes
+				}
+			add_resource = { 
+					type = steel
+					amount = 20
+			}
+			add_resource = { 
+					type = tungsten
+					amount = 16
+			}
+			add_resource = { 
+					type = chromium
+					amount = 8
+			}
+		}
+		
+	}
+}
+	focus = {
+		id = TOP_connect_himalaya
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = TOP_develop_china_resources }
+		prerequisite = { focus = TOP_fortify_positions_in_himalaya }
+		x = 0
+		y = 1
+		relative_position_id = TOP_develop_china_resources
+		cost = 5
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		has_war = no
+		owns_state = 758
+		owns_state = 323
+		owns_state = 757
+		owns_state = 324
+		owns_state = 322
+            }
+
+		completion_reward = {
+		build_railway = {
+		level = 2
+		path = { 10741 5033 2014 8010 }
+		}
+		build_railway = {
+		level = 2
+		path = { 2014 4900 12892 4987 }
+		}
+		build_railway = {
+		level = 2
+		path = { 12899 10918 7926 5033 }
+		}
+		build_railway = {
+		level = 2
+		path = { 4973 12801 10802 8029 1991 8121 4994 5033 }
+		}
+		758 = {
+			add_building_construction = {
+					type = supply_node
+					province = 10802
+					level = 1
+				}
+		}
+	}
+}
+	focus = {
+		id = TOP_tibet_ultimatum
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TOP_reclaim_china }
+		x = -2
+		y = 1
+		relative_position_id = TOP_reclaim_china
+		cost = 5
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		has_war = no
+		}
+
+		completion_reward = {
+		TIB = {
+		country_event = TOP_event.9
+		}
+	}
+}
+	focus = {
+		id = TOP_nepal_bhutan_ultimatum
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = TOP_tibet_ultimatum }
+		x = 0
+		y = 1
+		relative_position_id = TOP_tibet_ultimatum
+		cost = 5
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		has_war = no
+		}
+
+		completion_reward = {
+		BHU = {
+		country_event = TOP_event.13
+		}
+		NEP = {
+		country_event = TOP_event.14
+		}
+	}
+}
+	focus = {
+		id = TOP_fortify_positions_in_himalaya
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = TOP_nepal_bhutan_ultimatum }
+		x = 0
+		y = 1
+		relative_position_id = TOP_nepal_bhutan_ultimatum
+		cost = 5
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		owns_state = 758
+		owns_state = 323
+		owns_state = 757
+		owns_state = 324
+		}
+
+		completion_reward = {
+		758 = {
+		add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = bunker
+					province = 12801
+					level = 5
+				}
+		add_building_construction = {
+					type = bunker
+					province = 10802
+					level = 5
+				}
+		add_building_construction = {
+					type = bunker
+					province = 1961
+					level = 5
+				}
+		}
+		323 = {
+		add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = bunker
+					province = 10825
+					level = 3
+				}
+		add_building_construction = {
+					type = bunker
+					province = 7374
+					level = 3
+				}
+		add_building_construction = {
+					type = bunker
+					province = 4386
+					level = 3
+				}
+		add_building_construction = {
+					type = bunker
+					province = 4987
+					level = 3
+				}
+		add_building_construction = {
+					type = bunker
+					province = 5310
+					level = 3
+				}
+		add_building_construction = {
+					type = bunker
+					province = 12892
+					level = 3
+				}
+		}
+		757 = {
+		add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = bunker
+					province = 4900
+					level = 5
+				}
+		add_building_construction = {
+					type = bunker
+					province = 2014
+					level = 5
+				}
+		}
+		324 = {
+		add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = bunker
+					province = 8010
+					level = 5
+				}
+		add_building_construction = {
+					type = bunker
+					province = 12860
+					level = 5
+				}
+		}
+	}
+}
+	focus = {
+		id = TOP_stock_oil
+		icon = GFX_focus_generic_stockpile_fuel
+		prerequisite = { focus = TOP_prepare_for_war }
+		x = 5
+		y = 1
+		relative_position_id = TOP_prepare_for_war
+		cost = 6
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		owns_state = 743
+		owns_state = 745
+		}
+
+		completion_reward = {
+		743 = {
+		add_extra_state_shared_building_slots = 6
+		add_building_construction = {
+					type = synthetic_refinery
+					level = 3
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = fuel_silo
+					level = 3
+					instant_build = yes
+				}
+		}
+		745 = {
+		add_extra_state_shared_building_slots = 6
+		add_building_construction = {
+					type = synthetic_refinery
+					level = 3
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = fuel_silo
+					level = 3
+					instant_build = yes
+				}
+		}
+	}
+}
+	focus = {
+		id = TOP_encourage_people_for_war
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TOP_stock_oil }
+		x = 0
+		y = 1
+		relative_position_id = TOP_stock_oil
+		cost = 6
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		add_war_support = 0.15
+		add_political_power = 100
+	}
+}
+	focus = {
+		id = TOP_claim_japan
+		icon = GFX_focus_AST_war_japan
+		prerequisite = { focus = TOP_prepare_supply_stashes }
+		prerequisite = { focus = TOP_hand_out_modern_weapons }
+		prerequisite = { focus = TOP_encourage_people_for_war }
+		x = -3
+		y = 1
+		relative_position_id = TOP_encourage_people_for_war
+		cost = 6
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		custom_effect_tooltip = TOP_claim_japan_tt
+		hidden_effect = {
+		JAP = {
+					every_owned_state = {
+						ROOT = { add_state_claim = PREV }
+					}
+				}
+		}
+	}
+}
+	focus = {
+		id = TOP_attack_japan
+		icon = GFX_focus_attack_japan
+		prerequisite = { focus = TOP_claim_japan }
+		x = 0
+		y = 1
+		relative_position_id = TOP_claim_japan
+		cost = 1
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		declare_war_on = {
+    	target = JAP
+    	type = annex_everything
+		}
+		add_threat = 5
+	}
+}
+	focus = {
+		id = TOP_buy_pearls
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TOP_attack_japan }
+		x = 0
+		y = 1
+		relative_position_id = TOP_attack_japan
+		cost = 1
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		has_war = no
+		}
+
+		completion_reward = {
+		custom_effect_tooltip = TOP_unlock_buy_hong_kong_tt
+		custom_effect_tooltip = TOP_unlock_buy_macao_tt
+	}
+}
+	focus = {
+		id = TOP_buy_fra_indo
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = TOP_buy_pearls }
+		x = 0
+		y = 1
+		relative_position_id = TOP_buy_pearls
+		cost = 1
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		has_war = no
+		}
+
+		completion_reward = {
+		custom_effect_tooltip = TOP_unlock_buy_french_indochina_tt
+	}
+}
+	focus = {
+		id = TOP_build_big_navy
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = TOP_buy_fra_indo }
+		x = 0
+		y = 1
+		relative_position_id = TOP_buy_fra_indo
+		cost = 15
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		has_war = no
+		owns_state = 524
+		owns_state = 526
+		owns_state = 596
+		owns_state = 613
+		}
+
+		completion_reward = {
+		524 = {
+		add_extra_state_shared_building_slots = 5
+		add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+		}
+		526 = {
+		add_extra_state_shared_building_slots = 5
+		add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+		}
+		596 = {
+		add_extra_state_shared_building_slots = 5
+		add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+		}
+		613 = {
+		add_extra_state_shared_building_slots = 5
+		add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+		}
+	}
+}
+	focus = {
+		id = TOP_integrate_new_lands
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = TOP_build_big_navy focus = TOP_fortify_islands }
+		x = 0
+		y = 1
+		relative_position_id = TOP_build_big_navy
+		cost = 10
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+		add_state_core = 326
+		add_state_core = 729
+		add_state_core = 728
+		add_state_core = 671
+		add_state_core = 670
+		add_state_core = 286
+		add_state_core = 741
+		add_state_core = 638
+		add_state_core = 632
+		add_state_core = 642
+		add_state_core = 725
+		add_state_core = 639
+		add_state_core = 643
+	}
+}
+	focus = {
+		id = TOP_buy_islands
+		icon = GFX_focus_chi_mission_to_the_us
+		prerequisite = { focus = TOP_attack_japan }
+		x = 2
+		y = 1
+		relative_position_id = TOP_attack_japan
+		cost = 1
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		has_war = no
+		}
+
+		completion_reward = {
+		custom_effect_tooltip = TOP_unlock_descision_colonial_tt
+	}
+}
+	focus = {
+		id = TOP_buy_british_islands
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = TOP_buy_islands }
+		x = 0
+		y = 1
+		relative_position_id = TOP_buy_islands
+		cost = 1
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		has_war = no
+		}
+
+		completion_reward = {
+		custom_effect_tooltip = TOP_unlock_buy_british_islands_tt
+	}
+}
+focus = {
+		id = TOP_fortify_islands
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = TOP_buy_british_islands }
+		x = 0
+		y = 1
+		relative_position_id = TOP_buy_british_islands
+		cost = 5
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		owns_state = 643
+		owns_state = 642
+		owns_state = 632
+		owns_state = 725
+		owns_state = 639
+		}
+
+		completion_reward = {
+		643 = {
+		add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = coastal_bunker
+					province = 13056
+					level = 5
+				}
+		add_building_construction = {
+					type = coastal_bunker
+					province = 13054
+					level = 5
+				}
+		add_building_construction = {
+					type = naval_base
+					province = 13056
+					level = 5
+				}
+		add_building_construction = {
+					type = naval_base
+					province = 13054
+					level = 3
+				}
+		}
+		642 = {
+		add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = coastal_bunker
+					province = 13050
+					level = 5
+				}
+		add_building_construction = {
+					type = naval_base
+					province = 13050
+					level = 3
+				}
+		}
+		632 = {
+		add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = coastal_bunker
+					province = 13047
+					level = 5
+				}
+		add_building_construction = {
+					type = naval_base
+					province = 13047
+					level = 3
+				}
+		}
+		725 = {
+		add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = coastal_bunker
+					province = 13038
+					level = 5
+				}
+		add_building_construction = {
+					type = naval_base
+					province = 13038
+					level = 3
+				}
+		}
+		639 = {
+		add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = coastal_bunker
+					province = 7393
+					level = 5
+				}
+		add_building_construction = {
+					type = naval_base
+					province = 7393
+					level = 3
+				}
+		add_building_construction = {
+					type = coastal_bunker
+					province = 13021
+					level = 5
+				}
+		add_building_construction = {
+					type = naval_base
+					province = 13021
+					level = 3
+				}
+		add_building_construction = {
+					type = coastal_bunker
+					province = 4387
+					level = 5
+				}
+		add_building_construction = {
+					type = naval_base
+					province = 4387
+					level = 3
+				}
+		add_building_construction = {
+					type = coastal_bunker
+					province = 13020
+					level = 5
+				}
+		add_building_construction = {
+					type = naval_base
+					province = 13020
+					level = 3
+				}
+		}
+	}
+}
+
+####A NEW TOPIA?
+	focus = {
+		id = TOP_a_new_topia
+		icon = GFX_focus_TOP_federation
+		prerequisite = { focus = TOP_integrate_new_lands }
+		prerequisite = { focus = TOP_connect_himalaya }
+		x = -2
+		y = 1
+		relative_position_id = TOP_integrate_new_lands
+		cost = 10
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		completion_reward = {
+			load_focus_tree = topia_fed_focus
+			set_cosmetic_tag = TOP_FED
+	}
+}
+#POLITICS
+	focus = {
+		id = TOP_secure_politics
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = TOP_stay_with_the_kaiser focus = TOP_get_democratic }
+		x = 12
+		y = 1
+		relative_position_id = TOP_stay_with_the_kaiser
+		cost = 5
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = TOP_clamp_down_on_fascism
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		prerequisite = { focus = TOP_secure_politics }
+		x = 0
+		y = 1
+		relative_position_id = TOP_secure_politics
+		cost = 6
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_timed_idea = {
+			idea = TOP_clamp_fascist
+			days = 365
+		}
+	}
+	}
+	focus = {
+		id = TOP_arrest_fascist_leaders
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = TOP_clamp_down_on_fascism }
+		x = 0
+		y = 1
+		relative_position_id = TOP_clamp_down_on_fascism
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = {
+		ideology = fascism
+		popularity = -0.15
+		}
+		add_stability = -0.05
+		}
+	}
+	focus = {
+		id = TOP_ban_fascist_party
+		icon = GFX_focus_POL_ban_nazi_party
+		prerequisite = { focus = TOP_arrest_fascist_leaders }
+		x = 0
+		y = 1
+		relative_position_id = TOP_arrest_fascist_leaders
+		cost = 10
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = {
+		ideology = fascism
+		popularity = -0.3
+		}
+		add_stability = -0.1
+		add_political_power = 100
+		add_timed_idea = {
+		idea = TOP_fascism_waning
+		days = 1825
+		}
+	}
+	}
+focus = {
+		id = TOP_secure_the_country
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = TOP_ban_fascist_party }
+		x = 0
+		y = 2
+		relative_position_id = TOP_ban_fascist_party
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = no
+
+		available = {
+		has_war = no
+		}
+
+		completion_reward = {
+			add_popularity = {
+		ideology = fascism
+		popularity = -0.2
+		}
+		if = {
+			limit = {
+				has_government = democratic
+			}
+			add_popularity = {
+		ideology = democratic
+		popularity = 0.1
+		}
+		}
+		if = {
+			limit = {
+				has_government = neutrality
+			}
+			add_popularity = {
+		ideology = neutrality
+		popularity = 0.1
+		}
+		}
+		add_stability = 0.1
+		add_political_power = 100
+	}
+}
+#
+#FASCISM
+#
+	focus = {
+		id = TOP_give_in_to_the_facists
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = TOP_political_decisions }
+		mutually_exclusive = {focus = TOP_stay_with_the_kaiser }
+		mutually_exclusive = {focus = TOP_the_communist_route }
+		mutually_exclusive = {focus = TOP_get_democratic }
+		x = 26
+		y = 1
+		relative_position_id = TOP_political_decisions
+		cost = 2
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		available = {
+			 always = no
+		}
+
+		completion_reward = {
+		add_popularity = {
+		ideology = fascism
+		popularity = 0.1
+		}
+	}
+}
+#
+#COMMUNISM
+#
+	focus = {
+		id = TOP_the_communist_route
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = TOP_political_decisions } 
+		mutually_exclusive = {focus = TOP_stay_with_the_kaiser }
+		mutually_exclusive = {focus = TOP_get_democratic }
+		mutually_exclusive = {focus = TOP_give_in_to_the_facists }
+		x = -26
+		y = 1
+		relative_position_id = TOP_political_decisions
+		cost = 2
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = no
+
+		available = {
+			 always = no
+		}
+
+		completion_reward = {
+		add_popularity = {
+		ideology = communism
+		popularity = 0.1
+		}
+	}
+}
+#
+#DEMOCRACY
+#
+	focus = {
+		id = TOP_get_democratic
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = TOP_political_decisions }
+		mutually_exclusive = { focus = TOP_the_communist_route }
+		mutually_exclusive = { focus = TOP_stay_with_the_kaiser }
+		mutually_exclusive = { focus = TOP_give_in_to_the_facists }
+		x = 12
+		y = 1
+		relative_position_id = TOP_political_decisions
+		cost = 2
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = no
+
+		available = {
+			 always = no
+		}
+
+		completion_reward = {
+		add_popularity = {
+		ideology = democratic
+		popularity = 0.1
+		}
+	}
+}
+
+#
+# ECONOMIC
+#
+	focus = {
+		id = TOP_industrial_programm
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TOP_finshing_constitution }
+		x = 20
+		y = 1
+		relative_position_id = TOP_finshing_constitution
+		cost = 2
+		ai_will_do = {
+			factor = 30
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_tech_bonus = {
+	    	bonus = 1
+	    	uses = 2
+ 	   		category = industry
+		}
+		608 = {
+		add_extra_state_shared_building_slots = 15
+		}
+		609 = {
+		add_extra_state_shared_building_slots = 10
+		}
+		610 = {
+		add_extra_state_shared_building_slots = 5
+		}
+		611 = {
+		add_extra_state_shared_building_slots = 5
+		}
+		612 = {
+		add_extra_state_shared_building_slots = 5
+		}
+		613 = {
+		add_extra_state_shared_building_slots = 5
+		}
+	}
+}   
+
+	focus = {
+		id = TOP_factorys
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = TOP_industrial_programm }
+		x = -2
+		y = 1
+		relative_position_id = TOP_industrial_programm
+		cost = 15
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+	owns_state = 608
+	owns_state = 609
+	owns_state = 610
+	owns_state = 611
+	owns_state = 612
+	owns_state = 613
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		608 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+		}
+		609 = {
+		add_extra_state_shared_building_slots = 5
+		add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+		}
+		610 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		}
+		611 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		}
+		612 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		}
+		613 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+		}
+		}
+	}
+	focus = {
+		id = TOP_japans_docks
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		prerequisite = { focus = TOP_factorys }
+		x = 0
+		y = 1
+		relative_position_id = TOP_factorys
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+		owns_state = 528
+		owns_state = 530
+		owns_state = 529
+		owns_state = 531
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		528 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+		}
+		530 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+		}
+		529 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+		}
+		531 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+		}
+		}
+	}
+	focus = {
+		id = TOP_ramp_up_mil_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = TOP_japans_docks }
+		x = 0
+		y = 1
+		relative_position_id = TOP_japans_docks
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+		owns_state = 743
+		owns_state = 745
+		owns_state = 525
+		owns_state = 716
+		threat > 0.1
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		743 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+		}
+		745 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+		}
+		525 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+		}
+		716 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+		}
+		}
+	}
+	focus = {
+		id = TOP_masses
+		icon = GFX_focus_research
+		prerequisite = { focus = TOP_industrial_programm }
+		x = -4
+		y = 1
+		relative_position_id = TOP_industrial_programm
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_ideas = TOP_educated_masses
+		add_research_slot = 1
+		}
+	}
+	focus = {
+		id = TOP_xue_hua_intititute
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TOP_masses }
+		x = 0
+		y = 1
+		relative_position_id = TOP_masses
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_tech_bonus = {
+	    	bonus = 2
+	    	uses = 2
+ 	   		category = electronics
+		}
+		}
+	}
+	focus = {
+		id = TOP_search_for_oil
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = TOP_masses }
+		x = -2
+		y = 1
+		relative_position_id = TOP_masses
+		cost = 15
+		ai_will_do = {
+			factor = 30
+		}
+
+		select_effect = { 
+			add_ideas = TOP_searching_oil
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		custom_effect_tooltip = SOV_focus_select_effect_tt
+		effect_tooltip = {
+		add_ideas = TOP_searching_oil
+		}
+		custom_effect_tooltip = TOP_removal_oil_search_tt
+		
+		custom_effect_tooltip = SOV_focus_complete_effect_tt
+		hidden_effect = {
+		remove_ideas = TOP_searching_oil
+		}
+
+		715 = {
+			add_resource = { 
+					type = oil
+					amount = 4
+		}
+		}
+		761 = {
+			add_resource = { 
+					type = oil
+					amount = 4
+		}
+		}
+		714 = {
+			add_resource = { 
+					type = oil
+					amount = 4
+		}
+		}
+		614 = {
+			add_resource = { 
+					type = oil
+					amount = 4
+		}
+		}
+		}
+	}
+	focus = {
+		id = TOP_infrastructure1
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TOP_industrial_programm }
+		x = 2
+		y = 1
+		relative_position_id = TOP_industrial_programm
+		cost = 1
+		ai_will_do = {
+			factor = 30
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_ideas = TOP_infrastructur_project
+	}
+  }
+  focus = {
+		id = TOP_infrastructure2
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TOP_infrastructure1 }
+		x = 0
+		y = 1
+		relative_position_id = TOP_infrastructure1
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		} 
+	
+	available = {
+  owns_state = 597
+  owns_state = 613
+  owns_state = 614
+  owns_state = 596
+  owns_state = 598
+	}
+
+	available_if_capitulated = yes
+
+	completion_reward = {
+	597 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		}
+		613 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		}
+		614 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		}
+		596 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		}
+	598 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		}
+		build_railway = {
+				level = 2
+			path = { 10076 1089 10095 7142 4082 1029 9971 4157 10000 }
+			}
+		build_railway = {
+				level = 2
+			path = { 1069 12045 7055 1124 1029 }
+			}
+		build_railway = {
+				level = 2
+			path = { 1069 12045 4071 7089 10000 }
+			}
+		build_railway = {
+				level = 2
+			path = { 1069 7189 11980 11996 9969 10068 }
+			}
+		build_railway = {
+				level = 2
+			path = { 7014 12052 10076 }
+			}
+		build_railway = {
+				level = 2
+			path = { 10076 7120 996 11913 }
+			}
+		build_railway = {
+				level = 2
+			path = { 7014 12076 4042 7191 }
+			}
+		build_railway = {
+				level = 2
+			path = { 7191 11991 1096 7058 9974 }
+			}
+		build_railway = {
+				level = 2
+			path = { 7191 11991 12059 1195 1055 }
+			}
+		build_railway = {
+				level = 2
+			path = { 9974 10058 1168 4013 1055 }
+			}
+	}
+	}
+	focus = {
+		id = TOP_infrastructure3
+		icon = GFX_focus_SOV_south_manchuria_railway
+		prerequisite = { focus = TOP_infrastructure2 }
+		x = 0
+		y = 1
+		relative_position_id = TOP_infrastructure2
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		} 
+	
+	available = {
+  owns_state = 610
+  owns_state = 611
+  owns_state = 612
+  owns_state = 761
+  owns_state = 714
+  owns_state = 717
+  owns_state = 716
+  owns_state = 715
+  owns_state = 328
+	}
+
+	available_if_capitulated = yes
+
+	completion_reward = {
+		610 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		}
+		611 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+		}
+		612 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		}
+		613 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		}
+		761 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+		}
+		714 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		}
+		717 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		}
+		716 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		}
+		715 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		}
+		328 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+		}
+		build_railway = {
+				level = 1
+				path = { 7674 12348 10363 7578 1811 1502 12485 4506 }
+			}
+	}
+	}
+	focus = {
+		id = TOP_infrastructure4
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TOP_infrastructure3 }
+		x = 0
+		y = 1
+		relative_position_id = TOP_infrastructure3
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		} 
+	
+	available = {
+  owns_state = 527
+  owns_state = 525
+	}
+
+	available_if_capitulated = yes
+
+	completion_reward = {
+	527 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		}
+	525 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		}
+	build_railway = {
+				level = 2
+				path = { 9790 3912 978 11775 6963 11781 9841 927 11862 6964 9897 }
+			}
+	build_railway = {
+				level = 2
+				path = { 11948 12085 1054 12060 4056 }
+			}
+	build_railway = {
+				level = 2
+				path = { 4056 7121 11912 12011 7021 1148 7125 }
+			}
+	build_railway = {
+				level = 2
+				path = { 7125 9981 848 10083 6928 3981 3852 6922 959 6822 898 6944 9897 }
+			}
+	}
+	}
+	focus = {
+		id = TOP_infrastructure5
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TOP_infrastructure4 }
+		x = 0
+		y = 1
+		relative_position_id = TOP_infrastructure4
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		} 
+	
+	available = {
+  owns_state = 524
+  owns_state = 526
+  owns_state = 528
+  owns_state = 530
+  owns_state = 529
+  owns_state = 531
+	}
+
+	available_if_capitulated = yes
+
+	completion_reward = {
+		526 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		}
+		528 = {
+		add_building_construction = {
+					type = naval_base
+					province = 9950
+					level = 4
+				}
+		add_building_construction = {
+					type = naval_base
+					province = 4102
+					level = 2
+				}
+		}
+		530 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = naval_base
+					province = 7197
+					level = 2
+				}
+		}
+		529 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		}
+		531 = {
+		add_building_construction = {
+					type = naval_base
+					province = 7072
+					level = 4
+				}
+		}
+		build_railway = {
+				level = 2
+				path = { 9950 7110 }
+			}
+		build_railway = {
+				level = 2
+				path = { 11925 10092 7046 7197 12028 9965 7072 }
+			}
+		build_railway = {
+				level = 1
+				path = { 11932 10124 1123 7115 }
+			}
+		}
+	}
+	focus = {
+		id = TOP_infrastructure6
+		icon = GFX_focus_POL_warsaw_main_station
+		prerequisite = { focus = TOP_infrastructure5 }
+		x = 0
+		y = 1
+		relative_position_id = TOP_infrastructure5
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+		 owns_state = 608
+	} 
+	
+
+	available_if_capitulated = yes
+
+	completion_reward = {
+		swap_ideas = {
+		remove_idea = TOP_infrastructur_project
+		add_idea = TOP_beijing_roads
+		}
+		build_railway = {
+				level = 2
+				path = { 9843 11761 10068 }
+			}
+		build_railway = {
+				level = 2
+				path = { 9843 6969 }
+			}
+		build_railway = {
+				level = 2
+				path = { 9843 9776 952 1489 7674 11752 }
+			}
+		build_railway = {
+				level = 2
+				path = { 9843 4140 12026 7109 4190 12062 }
+			}
+		build_railway = {
+				level = 2
+				path = { 4190 1188 1169 }
+			}
+	}
+	}
+	focus = {
+		id = TOP_develop_n_manchuria
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = TOP_industrial_programm }
+		x = 0
+		y = 1
+		relative_position_id = TOP_industrial_programm
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+		  owns_state = 761
+		  owns_state = 714 
+		  owns_state = 717
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		761 = {
+		add_extra_state_shared_building_slots = 5
+		add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+		add_resource = { 
+					type = steel
+					amount = 24
+		}
+		}
+		714 = {
+		add_extra_state_shared_building_slots = 5
+		add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+		add_resource = { 
+					type = steel
+					amount = 24
+		}
+		}
+		717 = {
+		add_extra_state_shared_building_slots = 5
+		add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+		add_resource = { 
+					type = steel
+					amount = 24
+		}
+	}
+  }
+}
+	focus = {
+		id = TOP_develop_kirin_aluminium
+		icon = GFX_focus_generic_aluminum
+		prerequisite = { focus = TOP_develop_n_manchuria }
+		x = 0
+		y = 1
+		relative_position_id = TOP_develop_n_manchuria
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+		  owns_state = 328
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		328 = {
+		add_extra_state_shared_building_slots = 5
+		add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+		add_resource = { 
+					type = aluminium
+					amount = 12
+		}
+	}
+  }
+}
+focus = {
+		id = TOP_develop_north_korean_tungsten
+		icon = GFX_focus_generic_tungsten
+		prerequisite = { focus = TOP_develop_kirin_aluminium }
+		x = 0
+		y = 1
+		relative_position_id = TOP_develop_kirin_aluminium
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+		  owns_state = 328
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		527 = {
+		add_extra_state_shared_building_slots = 5
+		add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+		add_resource = { 
+					type = tungsten
+					amount = 12
+		}
+		add_resource = { 
+					type = steel
+					amount = 12
+		}
+	}
+  }
+}
+
+}

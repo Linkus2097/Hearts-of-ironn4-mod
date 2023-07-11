@@ -1,0 +1,110 @@
+﻿##### TOPIA NAME LISTS #####
+### REGULAR DESTROYER NAMES###
+TOP_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { TOP }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	fallback_name = "Zerstotska %d"					
+
+	unique = {											
+	}
+}
+
+### LIGHT CRUISER NAMES###
+TOP_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { TOP }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	fallback_name = "Kruezer %d"
+
+	unique = {
+		"Dalian" "Osaka" "Gilb Flusa" "Shenyang" "Nanjing" "Radomir" “Shiffa” “Kruezer”
+	}
+}
+
+### HEAVY CRUISER NAMES###
+TOP_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	for_countries = { TOP }
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	fallback_name = "Schwir Kruezer %d"
+
+	unique = {
+		"Dalian" "Osaka" "Gilb Flusa" "Shenyang" "Nanjing" "Radomir" “Shiffa”
+	}
+}
+
+
+### BATTLESHIP NAMES ###
+TOP_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { TOP }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	
+	fallback_name = "Schlakschiffa %d"		
+
+	unique = {
+		"Philipp" "Imperium Romanum" "Dschengis Khanare" "Chandraguptakoli" "Caesari" "Julian" "Majorian Victus"
+	}
+}
+
+### BATTLECRUISER NAMES ###
+TOP_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BC
+
+	for_countries = { TOP }
+
+	type = ship
+	ship_types = { ship_hull_heavy battle_cruiser }
+	
+	fallback_name = "Schlakkruezer %d"		
+
+	unique = {
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+TOP_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { TOP }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	fallback_name = "Fligdingtrage %d"	
+
+	unique = {
+		"Caesar Philipp" "Generalo Friedek Loselog" "Generalo Georgi Todorov" "Generalo Ki Baochequi" "Generalo Hue Hijanji" "Generalo Bao Bingjaki" "Generalo Holko Rifhigt" "Generalo "  
+	}
+}
+
+### SUBMARINES ###
+TOP_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { TOP }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	fallback_name = "Podvodnitsa %d"
+	
+	unique = {
+	}
+}

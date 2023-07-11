@@ -1,0 +1,335 @@
+characters={
+	ALM_denis_i={
+		name="Denis I"
+		portraits={
+			civilian={
+				large="gfx/leaders/ALM/ALM_leader.dds"
+			}
+		}
+		country_leader={
+			desc="DENIS_I_DESC"
+			ideology=despotism
+			traits={ staunch_monarchist empire_builder economic_reformer eager_collaborator }
+			expire="1969.7.15.1"
+		}
+	}
+	ALM_denis_ii={
+		name="Denis II"
+		portraits={
+			civilian={
+				large="gfx/leaders/ALM/ALM_leader.dds"
+			}
+		}
+		country_leader={
+			desc="DENIS_I_DESC"
+			ideology=despotism
+			traits={ staunch_monarchist popular_figurehead }
+			expire="1969.7.15.1"
+		}
+	}
+	ALM_georgi_dimitrov={
+		name="Georgi Dimitrov"
+		portraits={
+			civilian={
+				large="GFX_portrait_bul_georgi_dimitrov"
+			}
+		}
+		country_leader={
+			desc="POLITICS_GEORGI_DIMITROV_DESC"
+			ideology=stalinism
+			traits={ the_hero_of_the_leipzig_trials }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ALM_nikola_mushanov={
+		name="Nikola Mushanov"
+		portraits={
+			civilian={
+				large="GFX_portrait_bul_nikola_mushanov"
+			}
+		}
+		country_leader={
+			desc="POLITICS_NIKOLA_MUSHANOV_DESC"
+			ideology=liberalism
+			traits={ appeaser }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ALM_hristo_lukov={
+		name="Hristo Lukov"
+		portraits={
+			civilian={
+				large="GFX_Portrait_bulgaria_hristo_lukov"
+			}
+		}
+		country_leader={
+			desc="POLITICS_HRISTO_LUKOV_DESC"
+			ideology=fascism_ideology
+			traits={ hardened_officer }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ALM_vasil_tenev_boydev={
+		name="Vasil Tenev Boydev"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			}
+		}
+		corps_commander={
+			traits={ armor_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	ALM_georgi_nikolov_popov={
+		name="Georgi Nikolov Popov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+			}
+		}
+		field_marshal={
+			traits={ defensive_doctrine }
+			skill=4
+			attack_skill=2
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	ALM_atanas_shalapatov={
+		name="Atanas Shalapatov"
+		portraits={
+			army={
+				small="GFX_portrait_bul_atanas_shalapatov_small"
+			}
+			army={
+				large="GFX_portrait_bul_atanas_shalapatov"
+			}
+		}
+		navy_leader={
+			traits={ old_guard_navy gentlemanly }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	ALM_nikola_mihailov_mihov={
+		name="Nikola Mihailov Mihov"
+		portraits={
+			army={
+				small="GFX_portrait_bul_nikola_mihov_small"
+			}
+			army={
+				large="GFX_portrait_bul_nikola_mihov"
+			}
+		}
+		field_marshal={
+			traits={ career_officer politically_connected fortress_buster }
+			skill=4
+			attack_skill=4
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=2000
+		}
+	}
+	ALM_georgi_popov={
+		name="Georgi Popov"
+		portraits={
+			army={
+				small="GFX_portrait_bul_georgi_popov_small"
+			}
+			army={
+				large="GFX_portrait_bul_georgi_popov"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer war_hero skilled_staffer }
+			skill=4
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=2001
+		}
+	}
+	ALM_nikola_hadzhipetkov={
+		name="Nikola Hadzhipetkov"
+		portraits={
+			army={
+				small="GFX_portrait_bul_nikola_hadzipetkov_small"
+			}
+			army={
+				large="GFX_portrait_bul_nikola_hadzipetkov"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist infantry_officer organizer }
+			skill=4
+			attack_skill=2
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=2002
+		}
+	}
+	ALM_ivan_markov={
+		name="Ivan Markov"
+		portraits={
+			army={
+				small="GFX_portrait_bul_ivan_markov_small"
+			}
+			army={
+				large="GFX_portrait_bul_ivan_markov"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless cavalry_leader }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=2004
+		}
+	}
+	ALM_georgi_markov={
+		name="Georgi Markov"
+		portraits={
+			army={
+				small="GFX_portrait_bul_georgi_markov_small"
+			}
+			army={
+				large="GFX_portrait_bul_georgi_markov"
+			}
+		}
+		corps_commander={
+			traits={ old_guard infantry_leader }
+			skill=3
+			attack_skill=4
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=2006
+		}
+	}
+	ALM_asen_nikolov={
+		name="Asen Nikolov"
+		portraits={
+			army={
+				small="GFX_portrait_bul_asen_nikolov_small"
+			}
+			army={
+				large="GFX_portrait_bul_asen_nikolov"
+			}
+		}
+		corps_commander={
+			traits={ career_officer infantry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=2007
+		}
+	}
+	ALM_konstantin_lukash={
+		name="Konstantin Lukash"
+		portraits={
+			army={
+				small="GFX_portrait_bul_konstantin_lukash_small"
+			}
+			army={
+				large="GFX_portrait_bul_konstantin_lukash"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=1
+			legacy_id=2008
+		}
+	}
+	ALM_nikola_stoychev={
+		name="Nikola Stoychev"
+		portraits={
+			army={
+				small="GFX_portrait_bul_nikola_stoychev_small"
+			}
+			army={
+				large="GFX_portrait_bul_nikola_stoychev"
+			}
+		}
+		corps_commander={
+			traits={ trait_cautious }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=2009
+		}
+	}
+	ALM_damian_velchev={
+		name="Damian Velchev"
+		portraits={
+			army={
+				small="GFX_portrait_bul_damyan_velchev_small"
+			}
+			army={
+				large="GFX_portrait_bul_damyan_velchev"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless harsh_leader }
+			skill=2
+			attack_skill=3
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=2010
+		}
+	}
+	ALM_angel_dotsev={
+		name="Angel Dotsev"
+		portraits={
+			army={
+				small="GFX_portrait_bul_angel_dotsev_small"
+			}
+			army={
+				large="GFX_portrait_bul_angel_dotsev"
+			}
+		}
+		corps_commander={
+			traits={ organizer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=2011
+		}
+	}
+}

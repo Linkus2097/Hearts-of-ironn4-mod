@@ -1,0 +1,220 @@
+characters={
+	TOP_philipp_ii={
+		name="Philipp II"
+		portraits={
+			civilian={
+				large="gfx/leaders/TOP/TOP_leader.dds"
+			}
+		}
+		country_leader={
+			desc="PHILIPP_I_DESC"
+			ideology=despotism
+			traits={ man_of_the_nation staunch_monarchist }
+			expire="1962.5.3.1"
+		}
+	}
+	TOP_philipp_i={
+		name="Philipp I"
+		portraits={
+			civilian={
+				large="gfx/leaders/TOP/TOP_leader.dds"
+			}
+		}
+		field_marshal={
+			traits={ brilliant_strategist infantry_officer infantry_leader }
+			skill=6
+			attack_skill=6
+			defense_skill=5
+			planning_skill=6
+			logistics_skill=4
+			legacy_id=1000
+		}
+		country_leader={
+			desc="PHILIPP_I_DESC"
+			ideology=despotism
+			traits={ dictator staunch_monarchist empire_builder economic_reformer }
+			expire="1962.5.3.1"
+		}
+	}
+	TOP_friedek_loselog={
+		name="Friedek Loselog"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/TOP/Portrait_Asia_Generic_land_1.dds"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist trait_cautious infantry_officer war_hero organizer infantry_leader skilled_staffer }
+			skill=6
+			attack_skill=6
+			defense_skill=4
+			planning_skill=5
+			logistics_skill=6
+			legacy_id=1001
+		}
+	}
+	TOP_ki_baochequi={
+		name="Ki Baochequi"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/TOP/Portrait_Asia_Generic_land_2.dds"
+			}
+		}
+		corps_commander={
+			traits={ inflexible_strategist trait_reckless infantry_officer war_hero infantry_leader skilled_staffer }
+			skill=6
+			attack_skill=4
+			defense_skill=6
+			planning_skill=4
+			logistics_skill=6
+			legacy_id=1002
+		}
+	}
+	TOP_hue_hijani={
+		name="Hue Hijani"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/TOP/Portrait_Asia_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			traits={ old_guard infantry_officer war_hero infantry_leader skilled_staffer winter_specialist }
+			skill=5
+			attack_skill=5
+			defense_skill=6
+			planning_skill=3
+			logistics_skill=6
+			legacy_id=1003
+		}
+	}
+	TOP_bao_bingjaki={
+		name="Bao Bingjaki"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/TOP/Portrait_Asia_Generic_land_4.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer war_hero infantry_leader }
+			skill=5
+			attack_skill=4
+			defense_skill=4
+			planning_skill=6
+			logistics_skill=6
+			legacy_id=1004
+		}
+	}
+	TOP_holko_rifhigt={
+		name="Holko Rifhigt"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/TOP/Portrait_Asia_Generic_navy_1.dds"
+			}
+		}
+		navy_leader={
+			traits={ old_guard gentlemanly chief_engineer superior_tactician fly_swatter lone_wolf concealment_expert }
+			skill=6
+			attack_skill=6
+			defense_skill=4
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=1009
+		}
+	}
+	TOP_torguf_hirlja={
+		name="Torguf Hirlja"
+		portraits={
+			army={
+				small="GFX_Portrait_Asia_Generic_navy_1_small"
+			}
+			army={
+				large="GFX_Portrait_Asia_Generic_navy_1"
+			}
+		}
+		navy_leader={
+			traits={ chief_engineer bold blockade_runner superior_tactician spotter fly_swatter ground_pounder marksman crisis_magician }
+			skill=5
+			attack_skill=5
+			defense_skill=4
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=1010
+		}
+	}
+	TOP_gukut_lixbon={
+		name="Gukut Lixbon"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/TOP/Portrait_Asia_Generic_navy_2.dds"
+			}
+		}
+		navy_leader={
+			traits={ bold seawolf blue_water_expert silent_hunter torpedo_expert lone_wolf concealment_expert }
+			skill=5
+			attack_skill=6
+			defense_skill=3
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=1011
+		}
+	}
+	TOP_peter_roberts={
+		name="Peter Roberts"
+		portraits={
+			civilian={
+				large="GFX_Portrait_Asia_Generic_2"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1947.1.1.12"
+			id=-1
+		}
+	}
+	TOP_john_roberts={
+		name="John Roberts"
+		portraits={
+			civilian={
+				large="GFX_Portrait_Asia_Generic_1"
+			}
+		}
+		country_leader={
+			ideology=leninism
+			traits={ financial_expert }
+			expire="1950.1.1.12"
+			id=-1
+		}
+	}
+	TOP_alexander_williams={
+		name="Alexander Williams"
+		portraits={
+			civilian={
+				large="GFX_Portrait_Asia_Generic_3"
+			}
+		}
+		country_leader={
+			ideology=nazism
+			traits={ ideological_crusader }
+			expire="1953.1.1.12"
+			id=-1
+		}
+	}
+}

@@ -1,0 +1,1078 @@
+﻿focus_tree = {
+	id = almaria_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ALM
+		}
+	}
+
+	focus = {
+		id = ALM_industrial_programm
+		icon = GFX_goal_generic_construct_civilian
+		x = 25
+		y = 0
+		cost = 2
+		ai_will_do = {
+			factor = 30
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        48 = {
+        add_extra_state_shared_building_slots = 15
+        }
+        212 = {
+        add_extra_state_shared_building_slots = 10
+        }
+		211 = {
+		add_extra_state_shared_building_slots = 5
+		}
+		341 = {
+		add_extra_state_shared_building_slots = 5
+		}
+		731 = {
+		add_extra_state_shared_building_slots = 5
+		}
+		106 = {
+		add_extra_state_shared_building_slots = 5
+		}
+    }
+    }
+    focus = {
+		id = ALM_second_five_year_plan
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = ALM_industrial_programm }
+		x = 0
+		y = 1
+		relative_position_id = ALM_industrial_programm
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        add_timed_idea = {
+        idea = ALM_second_five_year_plan
+        days = 1825
+        }
+        }
+    }
+    focus = {
+		id = ALM_found_infrastructure_department
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = ALM_second_five_year_plan }
+		x = 5
+		y = 1
+		relative_position_id = ALM_second_five_year_plan
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        add_ideas = ALM_infra_department
+        }
+    }
+    focus = {
+		id = ALM_uprading_the_railway_network
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = ALM_found_infrastructure_department }
+		x = 0
+		y = 1
+		relative_position_id = ALM_found_infrastructure_department
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        build_railway = {
+				level = 2
+			path = { 9783 11597 657 9635 687 }
+			}
+		build_railway = {
+				level = 2
+			path = { 949 3971 3952 3819 6842 9769 649 9783 }
+			}
+		build_railway = {
+				level = 3
+			path = { 9783 9919 9902 922 9833 }
+			}
+		build_railway = {
+				level = 1
+			path = { 11818 3526 3833 3882 }
+			}
+		build_railway = {
+				level = 2
+			path = { 949 935 907 3882 }
+			}
+		build_railway = {
+				level = 2
+			path = { 11818 3936 6990 9791 11774 11905 }
+			}
+		build_railway = {
+				level = 2
+			path = { 9833 6895 3893 11905 9862 6923 3937 3908 949 }
+			}
+		build_railway = {
+				level = 2
+			path = { 9833 11829 }
+			}
+		if = {
+        	limit = {
+        		has_idea = ALM_infra_department
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_infra_department2
+        	remove_idea = ALM_infra_department
+        }
+        }
+        }
+    }
+    focus = {
+		id = ALM_found_trade_and_resource_department
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = ALM_second_five_year_plan }
+		x = -5
+		y = 1
+		relative_position_id = ALM_second_five_year_plan
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        add_ideas = ALM_trade_resource_department
+        }
+    }
+    focus = {
+		id = ALM_locate_new_rescources
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = ALM_found_trade_and_resource_department }
+		x = -2
+		y = 1
+		relative_position_id = ALM_found_trade_and_resource_department
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        212 = {
+		add_resource = { 
+					type = tungsten
+					amount = 2
+		  }
+		}
+		836 = {
+		add_resource = { 
+					type = aluminium
+					amount = 2
+		  }
+		}
+		802 = {
+		add_resource = { 
+					type = rubber
+					amount = 2
+		  }
+		add_resource = { 
+					type = oil
+					amount = 2
+		  } 
+		}
+		if = {
+        	limit = {
+        		has_idea = ALM_trade_resource_department
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_trade_resource_department2
+        	remove_idea = ALM_trade_resource_department
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_trade_resource_department2
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_trade_resource_department3
+        	remove_idea = ALM_trade_resource_department2
+        }
+        }
+      }
+    }
+    focus = {
+		id = ALM_protectionism
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = ALM_found_trade_and_resource_department }
+		mutually_exclusive = { focus = ALM_free_trade }
+		x = 0
+		y = 1
+		relative_position_id = ALM_found_trade_and_resource_department
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        swap_ideas = {
+        	add_idea = limited_exports
+        	remove_idea = export_focus
+        }
+        if = {
+        	limit = {
+        		has_idea = ALM_trade_resource_department
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_trade_resource_department2
+        	remove_idea = ALM_trade_resource_department
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_trade_resource_department2
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_trade_resource_department3
+        	remove_idea = ALM_trade_resource_department2
+        }
+        }
+      }
+     }
+    focus = {
+		id = ALM_free_trade
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = ALM_found_trade_and_resource_department }
+		mutually_exclusive = { focus = ALM_protectionism }
+		x = 2
+		y = 1
+		relative_position_id = ALM_found_trade_and_resource_department
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        	swap_ideas = {
+        	add_idea = free_trade
+        	remove_idea = export_focus
+        }
+        if = {
+        	limit = {
+        		has_idea = ALM_trade_resource_department
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_trade_resource_department2
+        	remove_idea = ALM_trade_resource_department
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_trade_resource_department2
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_trade_resource_department3
+        	remove_idea = ALM_trade_resource_department2
+        }
+        }
+      }
+    }
+    focus = {
+		id = ALM_found_economy_department
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = ALM_second_five_year_plan }
+		x = 0
+		y = 1
+		relative_position_id = ALM_second_five_year_plan
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        add_ideas = ALM_economic_department
+        }
+    }
+    focus = {
+		id = ALM_develop_serbia
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = ALM_found_economy_department }
+		x = 0
+		y = 1
+		relative_position_id = ALM_found_economy_department
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+        owns_state = 108
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        108 = {
+        add_extra_state_shared_building_slots = 5
+		add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+	    add_extra_state_shared_building_slots = 5
+		add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+		}
+		if = {
+        	limit = {
+        		has_idea = ALM_economic_department
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_economic_department2
+        	remove_idea = ALM_economic_department
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_economic_department2
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_economic_department3
+        	remove_idea = ALM_economic_department2
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_economic_department3
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_economic_department4
+        	remove_idea = ALM_economic_department3
+        }
+        }
+        }
+    }
+    focus = {
+		id = ALM_develop_dobrucha
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = ALM_develop_serbia }
+		x = 0
+		y = 1
+		relative_position_id = ALM_develop_serbia
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+        owns_state = 77
+        owns_state = 836
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        77 = {
+        add_extra_state_shared_building_slots = 5
+		add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+	    add_extra_state_shared_building_slots = 5
+		add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+		}
+		836 = {
+        add_extra_state_shared_building_slots = 5
+		add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+	    add_extra_state_shared_building_slots = 5
+		add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+		}
+		if = {
+        	limit = {
+        		has_idea = ALM_economic_department
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_economic_department2
+        	remove_idea = ALM_economic_department
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_economic_department2
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_economic_department3
+        	remove_idea = ALM_economic_department2
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_economic_department3
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_economic_department4
+        	remove_idea = ALM_economic_department3
+        }
+        }
+        }
+    }
+    focus = {
+		id = ALM_develop_thrace
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = ALM_develop_dobrucha }
+		x = 0
+		y = 1
+		relative_position_id = ALM_develop_dobrucha
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+        owns_state = 184
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        184 = {
+        add_extra_state_shared_building_slots = 5
+		add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+	    add_extra_state_shared_building_slots = 5
+		add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+		}
+		if = {
+        	limit = {
+        		has_idea = ALM_economic_department
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_economic_department2
+        	remove_idea = ALM_economic_department
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_economic_department2
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_economic_department3
+        	remove_idea = ALM_economic_department2
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_economic_department3
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_economic_department4
+        	remove_idea = ALM_economic_department3
+        }
+        }
+        }
+    }
+    focus = {
+		id = ALM_plague
+		icon = GFX_focus_AST_squander_bug
+		prerequisite = {  }
+		x = 40
+		y = 0
+		cost = 2
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+        has_idea = ALM_disease
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        add_stability = 0.05
+        }
+    }
+    focus = {
+		id = ALM_increase_health_spend
+		icon = GFX_focus_mex_privatisation
+		prerequisite = { focus = ALM_plague }
+		x = -2
+		y = 1
+		relative_position_id = ALM_plague
+		cost = 3
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+        
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        if = {
+        	limit = {
+        		has_idea = ALM_disease
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_disease_health
+        	remove_idea = ALM_disease
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_disease_quarantine
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_disease_health_quarantine
+        	remove_idea = ALM_disease_quarantine
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_disease_qcalm
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_disease_hqcalm
+        	remove_idea = ALM_disease_qcalm
+        }
+        }
+        }
+    }
+    focus = {
+		id = ALM_build_hospitals
+		icon = GFX_focus_build_hospitals
+		prerequisite = { focus = ALM_increase_health_spend }
+		x = -1
+		y = 1
+		relative_position_id = ALM_increase_health_spend
+		cost = 4
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+        
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        if = {
+        	limit = {
+        		has_idea = ALM_disease_health
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_disease_hhospital
+        	remove_idea = ALM_disease_health
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_disease_health_quarantine
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_disease_hqhospital
+        	remove_idea = ALM_disease_health_quarantine
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_disease_hqcalm
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_disease_hqch
+        	remove_idea = ALM_disease_hqcalm
+        }
+        }
+        }
+    }
+    focus = {
+		id = ALM_quarantine
+		icon = GFX_focus_rom_parties_end
+		prerequisite = { focus = ALM_plague }
+		x = 2
+		y = 1
+		relative_position_id = ALM_plague
+		cost = 2
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+        
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        if = {
+        	limit = {
+        		has_idea = ALM_disease
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_disease_quarantine
+        	remove_idea = ALM_disease
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_disease_health
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_disease_health_quarantine
+        	remove_idea = ALM_disease_health
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_disease_hhospital
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_disease_hqhospital
+        	remove_idea = ALM_disease_hhospital
+        }
+        }
+        }
+    }
+    focus = {
+		id = ALM_calm_the_masses
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = ALM_quarantine }
+		x = 1
+		y = 1
+		relative_position_id = ALM_quarantine
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+        
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        if = {
+        	limit = {
+        		has_idea = ALM_disease_quarantine
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_disease_qcalm
+        	remove_idea = ALM_disease_quarantine
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_disease_health_quarantine
+        	}
+         	swap_ideas = {
+        	add_idea = ALM_disease_hqcalm
+        	remove_idea = ALM_disease_health_quarantine
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_disease_hqhospital
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_disease_hqch
+        	remove_idea = ALM_disease_hqhospital
+        }
+        }
+        }
+    }
+    focus = {
+		id = ALM_finish_reforms
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = ALM_increase_health_spend }
+		prerequisite = { focus = ALM_build_hospitals }
+		prerequisite = { focus = ALM_quarantine }
+		prerequisite = { focus = ALM_calm_the_masses }
+		x = 3
+		y = 1
+		relative_position_id = ALM_build_hospitals
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+        
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        remove_ideas = ALM_disease_hqch
+        add_stability = 0.15
+        }
+    }
+    focus = {
+		id = ALM_reform_healthcare
+		icon = GFX_focus_reforming_healthcare
+		prerequisite = { focus = ALM_finish_reforms }
+		x = 0
+		y = 1
+		relative_position_id = ALM_finish_reforms
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+        
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        add_war_support = 0.05
+        }
+    }
+    focus = {
+		id = ALM_buy_modern_equipment
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = ALM_reform_healthcare }
+		x = -1
+		y = 1
+		relative_position_id = ALM_reform_healthcare
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+        
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        if = {
+        	limit = {
+        		has_idea = ALM_bad_healthcare
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_bad_healthcare1
+        	remove_idea = ALM_bad_healthcare
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_bad_healthcare1
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_bad_healthcare2
+        	remove_idea = ALM_bad_healthcare1
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_bad_healthcare2
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_bad_healthcare3
+        	remove_idea = ALM_bad_healthcare2
+        }
+        }
+        }
+    }
+    focus = {
+		id = ALM_standardization_of_equipment_act
+		icon = GFX_focus_hol_the_foundations_of_defense
+		prerequisite = { focus = ALM_buy_modern_equipment }
+		x = 0
+		y = 1
+		relative_position_id = ALM_buy_modern_equipment
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+        
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        if = {
+        	limit = {
+        		has_idea = ALM_bad_healthcare
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_bad_healthcare1
+        	remove_idea = ALM_bad_healthcare
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_bad_healthcare1
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_bad_healthcare2
+        	remove_idea = ALM_bad_healthcare1
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_bad_healthcare2
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_bad_healthcare3
+        	remove_idea = ALM_bad_healthcare2
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_bad_healthcare3
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_bad_healthcare4
+        	remove_idea = ALM_bad_healthcare3
+        }
+        }
+        }
+    }
+    focus = {
+		id = ALM_professional_training
+		icon = GFX_focus_professional_training
+		prerequisite = { focus = ALM_reform_healthcare }
+		x = 1
+		y = 1
+		relative_position_id = ALM_reform_healthcare
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+        
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        if = {
+        	limit = {
+        		has_idea = ALM_bad_healthcare
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_bad_healthcare1
+        	remove_idea = ALM_bad_healthcare
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_bad_healthcare1
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_bad_healthcare2
+        	remove_idea = ALM_bad_healthcare1
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_bad_healthcare2
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_bad_healthcare3
+        	remove_idea = ALM_bad_healthcare2
+        }
+        }
+        }
+    }
+    focus = {
+		id = ALM_more_medical_schools
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = ALM_professional_training }
+		x = 0
+		y = 1
+		relative_position_id = ALM_professional_training
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+        
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        if = {
+        	limit = {
+        		has_idea = ALM_bad_healthcare
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_bad_healthcare1
+        	remove_idea = ALM_bad_healthcare
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_bad_healthcare1
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_bad_healthcare2
+        	remove_idea = ALM_bad_healthcare1
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_bad_healthcare2
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_bad_healthcare3
+        	remove_idea = ALM_bad_healthcare2
+        }
+        }
+        else_if = {
+        	limit = {
+        		has_idea = ALM_bad_healthcare3
+        	}
+        	swap_ideas = {
+        	add_idea = ALM_bad_healthcare4
+        	remove_idea = ALM_bad_healthcare3
+        }
+        }
+        }
+    }
+    focus = {
+		id = ALM_finish_healthcare_reform
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = ALM_more_medical_schools }
+		prerequisite = { focus = ALM_standardization_of_equipment_act }
+		x = -1
+		y = 1
+		relative_position_id = ALM_more_medical_schools
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+        
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        	swap_ideas = {
+        	add_idea = ALM_modern_healthcare
+        	remove_idea = ALM_bad_healthcare4
+        }
+        }
+    }
+    focus = {
+		id = ALM_solidify_kaiser
+		icon = GFX_focus_rom_royal_dictatorship
+		mutually_exclusive = { focus = ALM_oppose_kaiser }
+		x = 55
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+        
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        }
+    }
+    focus = {
+		id = ALM_oppose_kaiser
+		icon = GFX_focus_rom_abdicate
+		mutually_exclusive = { focus = ALM_solidify_kaiser }
+		x = 70
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+        
+		}
+
+		available_if_capitulated = no
+
+        completion_reward = {
+        }
+    }
+}

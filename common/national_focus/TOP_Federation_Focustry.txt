@@ -1,0 +1,17 @@
+﻿focus_tree = {
+	id = topia_fed_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = TOP
+		}
+	}
+
+## THE START
+
+
+
+}

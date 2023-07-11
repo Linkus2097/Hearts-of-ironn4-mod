@@ -1,0 +1,22 @@
+TOP_integration = {
+	priority = 10
+	icon = GFX_decision_category_spr_the_seeds_of_revolution
+
+	allowed = {
+		original_tag = TOP
+	}
+	visible = {
+	}
+}
+TOP_Dealing_with_colonial_powers = {
+	priority = 10
+	icon = GFX_decision_category_generic_political_actions
+
+	allowed = {
+		original_tag = TOP
+		has_completed_focus = TOP_buy_islands
+	}
+	visible = {
+	has_completed_focus = TOP_buy_islands
+	}
+}

@@ -1,0 +1,544 @@
+ideas = {
+
+	country = {
+	
+	ALM_bad_healthcare = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = great_depression
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = -0.3
+				conscription = -0.002
+                stability_factor = -0.15
+				war_support_factor = -0.1 
+			}
+		}
+	ALM_bad_healthcare1 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = great_depression
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = -0.2
+				conscription = -0.001
+                stability_factor = -0.1
+				war_support_factor = -0.05 
+			}
+		}
+	ALM_bad_healthcare2 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = great_depression
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = -0.1
+                stability_factor = -0.05
+				war_support_factor = -0.05 
+			}
+		}
+	ALM_bad_healthcare3 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = great_depression
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.1
+				conscription = 0.003
+			}
+		}
+	ALM_bad_healthcare4 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = great_depression
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.3
+				conscription = 0.004
+                stability_factor = 0.05
+			}
+		}
+	ALM_modern_healthcare = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_generic_central_management
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.5
+				conscription = 0.005
+                stability_factor = 0.15
+				war_support_factor = 0.1 
+				consumer_goods_factor = 0.01
+			}
+		}
+	ALM_disease = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = great_depression
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = -0.005
+                stability_factor = -0.2
+				war_support_factor = -0.2
+				production_speed_arms_factory_factor = -0.1
+				production_speed_dockyard_factor = -0.1
+				production_speed_industrial_complex_factor = -0.1
+                consumer_goods_factor = 0.05
+                surrender_limit = -0.7
+                min_export = -0.4
+			}
+		}
+	ALM_disease_health = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = great_depression
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = -0.003
+                stability_factor = -0.05
+				war_support_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+				production_speed_dockyard_factor = -0.1
+				production_speed_industrial_complex_factor = -0.1
+                consumer_goods_factor = 0.25
+                surrender_limit = -0.5
+                min_export = -0.3
+			}
+		}
+	ALM_disease_quarantine = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = great_depression
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = -0.005
+                stability_factor = -0.1
+				war_support_factor = -0.1
+				production_speed_arms_factory_factor = -0.2
+				production_speed_dockyard_factor = -0.2
+				production_speed_industrial_complex_factor = -0.2
+                consumer_goods_factor = 0.10
+                surrender_limit = -0.6
+                min_export = -0.35
+			}
+		}
+	ALM_disease_qcalm = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = great_depression
+
+			removal_cost = -1
+			
+			modifier = {
+                stability_factor = -0.05
+				war_support_factor = -0.1
+				production_speed_arms_factory_factor = -0.2
+				production_speed_dockyard_factor = -0.2
+				production_speed_industrial_complex_factor = -0.2
+                consumer_goods_factor = 0.10
+                surrender_limit = -0.4
+                min_export = -0.30
+			}
+		}
+	ALM_disease_health_quarantine = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = great_depression
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				conscription = -0.003
+				production_speed_arms_factory_factor = -0.2
+				production_speed_dockyard_factor = -0.2
+				production_speed_industrial_complex_factor = -0.2
+                consumer_goods_factor = 0.30
+                surrender_limit = -0.4
+                min_export = -0.25
+			}
+		}
+	ALM_disease_hqcalm = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = great_depression
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = -0.2
+				production_speed_dockyard_factor = -0.2
+				production_speed_industrial_complex_factor = -0.2
+                consumer_goods_factor = 0.30
+                surrender_limit = -0.2
+                min_export = -0.20
+			}
+		}
+	ALM_disease_hhospital = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = great_depression
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = -0.003
+                stability_factor = -0.05
+				war_support_factor = -0.1
+				production_speed_arms_factory_factor = -0.05
+				production_speed_dockyard_factor = -0.05
+                consumer_goods_factor = 0.30
+                surrender_limit = -0.4
+                min_export = -0.2
+			}
+		}
+	ALM_disease_hqhospital = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = great_depression
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = -0.003
+                stability_factor = -0.05
+				war_support_factor = -0.1
+				production_speed_arms_factory_factor = -0.15
+				production_speed_dockyard_factor = -0.15
+				production_speed_industrial_complex_factor = -0.10
+                consumer_goods_factor = 0.35
+                surrender_limit = -0.30
+                min_export = -0.15
+			}
+		}
+	ALM_disease_hqch = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = great_depression
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = -0.15
+				production_speed_dockyard_factor = -0.15
+				production_speed_industrial_complex_factor = -0.10
+                consumer_goods_factor = 0.35
+                min_export = -0.05
+			}
+		}
+	ALM_second_five_year_plan = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_man_five_year_plan_industry
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+                consumer_goods_factor = -0.05
+			}
+		}
+	ALM_economic_department = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_man_five_year_plan_industry
+
+			removal_cost = -1
+			
+			modifier = {
+                consumer_goods_factor = -0.05
+			}
+		}
+	ALM_economic_department2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_man_five_year_plan_industry
+
+			removal_cost = -1
+			
+			modifier = {
+                consumer_goods_factor = -0.07
+			}
+		}
+	ALM_economic_department3 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_man_five_year_plan_industry
+
+			removal_cost = -1
+			
+			modifier = {
+                consumer_goods_factor = -0.09
+			}
+		}
+	ALM_economic_department4 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_man_five_year_plan_industry
+
+			removal_cost = -1
+			
+			modifier = {
+                consumer_goods_factor = -0.10
+			}
+		}
+	ALM_infra_department = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_generic_build_infrastructure
+
+			removal_cost = -1
+			
+			modifier = {
+                production_speed_infrastructure_factor = 0.10
+                production_speed_rail_way_factor = 0.10
+			}
+		}
+	ALM_infra_department2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_generic_build_infrastructure
+
+			removal_cost = -1
+			
+			modifier = {
+                production_speed_infrastructure_factor = 0.15
+                production_speed_rail_way_factor = 0.15
+			}
+		}
+	ALM_trade_resource_department = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+			
+			modifier = {
+                consumer_goods_factor = -0.05
+                trade_opinion_factor = 0.2
+                local_resources_factor = 0.10
+			}
+		}
+	ALM_trade_resource_department2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+			
+			modifier = {
+                consumer_goods_factor = -0.07
+                trade_opinion_factor = 0.2
+                local_resources_factor = 0.15
+			}
+		}
+	ALM_trade_resource_department3 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+			
+			modifier = {
+                consumer_goods_factor = -0.10
+                trade_opinion_factor = 0.2
+                local_resources_factor = 0.20
+			}
+		}
+	}
+}
