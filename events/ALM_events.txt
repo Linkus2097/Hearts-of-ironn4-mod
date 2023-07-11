@@ -1,0 +1,26 @@
+add_namespace = ALM_event
+
+country_event = {
+	id = ALM_event.0
+	title = ALM_event.0.t
+	desc = ALM_event.0.d
+	picture = GFX_plague_outbreak
+	
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+	    tag = ALM
+	    AND = {
+            date > 1936.3.31
+        }
+	}
+
+	option = {
+		name = ALM_event.0.a
+		ai_chance = { factor = 100 }
+		add_stability = -0.1
+		add_war_support = -0.1
+		add_ideas = ALM_disease
+	}
+}

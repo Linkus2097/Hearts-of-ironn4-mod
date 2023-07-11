@@ -1,0 +1,882 @@
+add_namespace = TOP_event
+
+country_event = {
+	id = TOP_event.0
+	title = TOP_event.0.t
+	desc = TOP_event.0.d
+	picture = GFX_religion
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.0.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.05
+		add_political_power = 15
+	}
+	option = {
+		name = TOP_event.0.b
+		ai_chance = { factor = 100 }
+		add_stability = 0.01
+		add_political_power = 10
+	}
+	option = {
+		name = TOP_event.0.c
+		ai_chance = { factor = 100 }
+		add_stability = -0.03
+		add_political_power = -15
+	}
+}
+country_event = {
+	id = TOP_event.1
+	title = TOP_event.1.t
+	desc = TOP_event.1.d
+	picture = GFX_lgbtq_rights
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.1.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.05
+		add_political_power = 15
+	}
+	option = {
+		name = TOP_event.1.b
+		ai_chance = { factor = 100 }
+		add_stability = 0.01
+		add_political_power = 10
+	}
+	option = {
+		name = TOP_event.1.c
+		ai_chance = { factor = 100 }
+		add_stability = -0.03
+		add_political_power = -15
+	}
+}
+country_event = {
+	id = TOP_event.2
+	title = TOP_event.2.t
+	desc = TOP_event.2.d
+	picture = GFX_legal
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.2.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.06
+		add_political_power = 60
+	}
+	option = {
+		name = TOP_event.2.b
+		ai_chance = { factor = 100 }
+		add_stability = 0.03
+		add_political_power = 20
+	}
+	option = {
+		name = TOP_event.2.c
+		ai_chance = { factor = 100 }
+		add_stability = -0.06
+		add_political_power = -60
+	}
+}
+country_event = {
+	id = TOP_event.3
+	title = TOP_event.3.t
+	desc = TOP_event.3.d
+	picture = GFX_liberty
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.3.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.1
+		add_political_power = -55
+	}
+	option = {
+		name = TOP_event.3.b
+		ai_chance = { factor = 100 }
+		add_stability = 0.05
+		add_political_power = -20
+	}
+	option = {
+		name = TOP_event.3.c
+		ai_chance = { factor = 100 }
+		add_stability = -0.1
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = TOP_event.4
+	title = TOP_event.4.t
+	desc = TOP_event.4.d
+	picture = GFX_governed
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.4.a
+		ai_chance = { factor = 100 }
+		add_political_power = 100
+	}
+	option = {
+		name = TOP_event.4.b
+		ai_chance = { factor = 100 }
+		add_political_power = 50
+	}
+	}
+country_event = {
+	id = TOP_event.5
+	title = TOP_event.5.t
+	desc = TOP_event.5.d
+	picture = GFX_absolutism
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.5.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.01
+		add_political_power = 150
+	}
+}
+country_event = {
+	id = TOP_event.6
+	title = TOP_event.6.t
+	desc = TOP_event.6.d
+	picture = GFX_distribute
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.6.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.01
+		add_political_power = 10
+	}
+	option = {
+		name = TOP_event.6.b
+		ai_chance = { factor = 100 }
+		add_stability = 0.1
+		add_political_power = -10
+	}
+}
+country_event = {
+	id = TOP_event.7
+	title = TOP_event.7.t
+	desc = TOP_event.7.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.7.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.05
+		add_political_power = 5
+	}
+	option = {
+		name = TOP_event.7.b
+		ai_chance = { factor = 100 }
+		add_stability = 0.05
+		add_political_power = 5
+	}
+	option = {
+		name = TOP_event.7.c
+		ai_chance = { factor = 100 }
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = TOP_event.8
+	title = TOP_event.8.t
+	desc = TOP_event.8.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.8.a
+		ai_chance = { factor = 5 }
+		unlock_national_focus = TOP_stay_with_the_kaiser
+	}
+	option = {
+		name = TOP_event.8.b
+		ai_chance = { factor = 50 }
+		unlock_national_focus = TOP_give_in_to_the_facists
+	}
+	option = {
+		name = TOP_event.8.c
+		ai_chance = { factor = 5 }
+		unlock_national_focus = TOP_the_communist_route
+	}
+	option = {
+		name = TOP_event.8.optd
+		ai_chance = { factor = 40 }
+		unlock_national_focus = TOP_get_democratic
+	}
+}
+country_event = {
+	id = TOP_event.10
+	title = TOP_event.10.t
+	desc = TOP_event.10.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.10.a
+		ai_chance = { factor = 50 }
+		complete_national_focus = TOP_consumer_economy
+	}
+	option = {
+		name = TOP_event.10.b
+		ai_chance = { factor = 50 }
+		complete_national_focus = TOP_export_economy
+	}
+}
+country_event = {
+	id = TOP_event.9
+	title = TOP_event.9.t
+	desc = TOP_event.9.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.9.a
+		ai_chance = { factor = 50 }
+		TOP = {
+			country_event = TOP_event.12
+		}
+	}
+	option = {
+		name = TOP_event.9.b
+		ai_chance = { factor = 50 }
+		TOP = {
+			country_event = TOP_event.11
+		}
+	}
+}
+country_event = {
+	id = TOP_event.11
+	title = TOP_event.11.t
+	desc = TOP_event.11.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.11.a
+		ai_chance = { factor = 90 }
+		declare_war_on = {
+		target = TIB
+		type = annex_everything
+		}
+	}
+	option = {
+		name = TOP_event.11.b
+		ai_chance = { factor = 10 }
+		add_war_support = -0.05
+		add_political_power = -100
+	}
+}
+country_event = {
+	id = TOP_event.12
+	title = TOP_event.12.t
+	desc = TOP_event.12.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.12.a
+		ai_chance = { factor = 100 }
+		annex_country = {
+    			target = TIB
+    			transfer_troops = yes
+			}
+	}
+}
+country_event = {
+	id = TOP_event.13
+	title = TOP_event.13.t
+	desc = TOP_event.13.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.13.a
+		ai_chance = { factor = 80 }
+		TOP = {
+			country_event = TOP_event.15
+		}
+	}
+	option = {
+		name = TOP_event.13.b
+		ai_chance = { factor = 20 }
+		TOP = {
+			country_event = TOP_event.16
+		}
+	}
+}
+country_event = {
+	id = TOP_event.14
+	title = TOP_event.14.t
+	desc = TOP_event.14.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.14.a
+		ai_chance = { factor = 80 }
+		TOP = {
+			country_event = TOP_event.17
+		}
+	}
+	option = {
+		name = TOP_event.14.b
+		ai_chance = { factor = 20 }
+		TOP = {
+			country_event = TOP_event.18
+		}
+	}
+}
+country_event = {
+	id = TOP_event.16
+	title = TOP_event.16.t
+	desc = TOP_event.16.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.16.a
+		ai_chance = { factor = 90 }
+		declare_war_on = {
+		target = BHU
+		type = annex_everything
+		}
+	}
+	option = {
+		name = TOP_event.16.b
+		ai_chance = { factor = 10 }
+		add_war_support = -0.05
+		add_political_power = -100
+	}
+}
+country_event = {
+	id = TOP_event.15
+	title = TOP_event.15.t
+	desc = TOP_event.15.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.15.a
+		ai_chance = { factor = 100 }
+		annex_country = {
+    			target = BHU
+    			transfer_troops = yes
+			}
+	}
+}
+country_event = {
+	id = TOP_event.18
+	title = TOP_event.18.t
+	desc = TOP_event.18.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.18.a
+		ai_chance = { factor = 90 }
+		declare_war_on = {
+		target = NEP
+		type = annex_everything
+		}
+	}
+	option = {
+		name = TOP_event.18.b
+		ai_chance = { factor = 10 }
+		add_war_support = -0.05
+		add_political_power = -100
+	}
+}
+country_event = {
+	id = TOP_event.17
+	title = TOP_event.17.t
+	desc = TOP_event.17.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.17.a
+		ai_chance = { factor = 100 }
+		annex_country = {
+    			target = NEP
+    			transfer_troops = yes
+			}
+	}
+}
+country_event = {
+	id = TOP_event.19
+	title = TOP_event.19.t
+	desc = TOP_event.19.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.19.a
+		ai_chance = { factor = 100 }
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = TOP_event.20
+	title = TOP_event.20.t
+	desc = TOP_event.20.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.20.a
+		ai_chance = { factor = 100 }
+		TOP = {
+			country_event = TOP_event.21
+		}
+	}
+	option = {
+		name = TOP_event.20.b
+		ai_chance = { factor = 0 }
+		TOP = {
+			country_event = TOP_event.19
+		}
+	}
+}
+country_event = {
+	id = TOP_event.21
+	title = TOP_event.21.t
+	desc = TOP_event.21.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.21.a
+		ai_chance = { factor = 100 }
+		set_state_owner = 638
+		set_state_owner = 632
+		set_state_owner = 642
+		add_political_power = -100
+		USA = {
+			add_political_power = 100
+		}
+	}
+}
+country_event = {
+	id = TOP_event.22
+	title = TOP_event.22.t
+	desc = TOP_event.22.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.22.a
+		ai_chance = { factor = 100 }
+		TOP = {
+			country_event = TOP_event.23
+		}
+	}
+	option = {
+		name = TOP_event.22.b
+		ai_chance = { factor = 0 }
+		TOP = {
+			country_event = TOP_event.24
+		}
+	}
+}
+	country_event = {
+	id = TOP_event.23
+	title = TOP_event.23.t
+	desc = TOP_event.23.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.23.a
+		ai_chance = { factor = 100 }
+		set_state_owner = 639
+		set_state_owner = 725
+		set_state_owner = 643
+		add_political_power = -100
+		ENG = {
+			add_political_power = 100
+		}
+	}
+}
+	country_event = {
+	id = TOP_event.24
+	title = TOP_event.24.t
+	desc = TOP_event.24.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.24.a
+		ai_chance = { factor = 100 }
+		add_political_power = 50
+	}
+}
+	country_event = {
+	id = TOP_event.25
+	title = TOP_event.25.t
+	desc = TOP_event.25.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.25.a
+		ai_chance = { factor = 100 }
+		TOP = {
+			country_event = TOP_event.26
+		}
+	}
+	option = {
+		name = TOP_event.25.b
+		ai_chance = { factor = 0 }
+		TOP = {
+			country_event = TOP_event.27
+		}
+	}
+}
+	country_event = {
+	id = TOP_event.26
+	title = TOP_event.26.t
+	desc = TOP_event.26.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.26.a
+		ai_chance = { factor = 100 }
+		set_state_owner = 729
+		add_political_power = -100
+		POR = {
+			add_political_power = 100
+		}
+	}
+}
+	country_event = {
+	id = TOP_event.27
+	title = TOP_event.27.t
+	desc = TOP_event.27.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.27.a
+		ai_chance = { factor = 100 }
+		add_political_power = 50
+	}
+}
+	country_event = {
+	id = TOP_event.28
+	title = TOP_event.28.t
+	desc = TOP_event.28.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.28.a
+		ai_chance = { factor = 100 }
+		TOP = {
+			country_event = TOP_event.29
+		}
+	}
+	option = {
+		name = TOP_event.28.b
+		ai_chance = { factor = 0 }
+		TOP = {
+			country_event = TOP_event.30
+		}
+	}
+}
+	country_event = {
+	id = TOP_event.29
+	title = TOP_event.29.t
+	desc = TOP_event.29.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.29.a
+		ai_chance = { factor = 100 }
+		set_state_owner = 326
+		add_political_power = -100
+		ENG = {
+			add_political_power = 100
+		}
+	}
+}
+	country_event = {
+	id = TOP_event.30
+	title = TOP_event.30.t
+	desc = TOP_event.30.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.30.a
+		ai_chance = { factor = 100 }
+		add_political_power = 50
+	}
+}
+	country_event = {
+	id = TOP_event.31
+	title = TOP_event.31.t
+	desc = TOP_event.31.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.31.a
+		ai_chance = { factor = 100 }
+		TOP = {
+			country_event = TOP_event.32
+		}
+	}
+	option = {
+		name = TOP_event.31.b
+		ai_chance = { factor = 0 }
+		TOP = {
+			country_event = TOP_event.33
+		}
+	}
+}
+	country_event = {
+	id = TOP_event.32
+	title = TOP_event.32.t
+	desc = TOP_event.32.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.32.a
+		ai_chance = { factor = 100 }
+		set_state_owner = 728
+		set_state_owner = 671
+		set_state_owner = 970
+		set_state_owner = 741
+		set_state_owner = 286
+		add_political_power = -300
+		FRA = {
+			add_political_power = 300
+		}
+	}
+}
+	country_event = {
+	id = TOP_event.33
+	title = TOP_event.33.t
+	desc = TOP_event.33.d
+	picture = GFX_is
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	    
+	}
+
+	option = {
+		name = TOP_event.33.a
+		ai_chance = { factor = 100 }
+		add_political_power = 50
+	}
+}
